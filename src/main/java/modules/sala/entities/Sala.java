@@ -1,6 +1,6 @@
-package br.com.tddjava.tddjava.modules.sala.entities;
+package modules.sala.entities;
 
-import br.com.tddjava.tddjava.modules.numeroBloco;
+import modules.numeroBloco;
 
 public class Sala {
     int qtdCadeiras;

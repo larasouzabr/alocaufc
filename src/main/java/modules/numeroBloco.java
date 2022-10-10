@@ -1,4 +1,4 @@
-package br.com.tddjava.tddjava.modules;
+package modules;
 
 public enum numeroBloco {
     BLOCO1;

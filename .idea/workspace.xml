@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/tddjava/tddjava/TddJavaApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/tddjava/tddjava/modules/numeroBloco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/tddjava/tddjava/modules/sala/entities/Sala.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/tddjava/tddjava/modules/sala/services/CreateSalaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/tddjava/tddjava/TddJavaApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/tddjava/tddjava/services/cadastrarSala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/tddjava/tddjava/TddJavaApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/tddjava/tddjava/modules/numeroBloco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/numeroBloco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/tddjava/tddjava/modules/sala/entities/Sala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/sala/entities/Sala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/tddjava/tddjava/modules/sala/services/CreateSalaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/sala/services/CreateSalaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/tddjava/tddjava/TddJavaApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/tddjava/tddjava/services/cadastrarSala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/services/cadastrarSala.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,12 +61,12 @@
       <module name="alocaufc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.tddjava.tddjava.services.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="br.com.tddjava.tddjava.services" />
-      <option name="MAIN_CLASS_NAME" value="br.com.tddjava.tddjava.services.CadastrarSala" />
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.CadastrarSala" />
       <option name="METHOD_NAME" value="cadastrarSalaComSucesso" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">

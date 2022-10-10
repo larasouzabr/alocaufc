@@ -1,8 +1,8 @@
-package br.com.tddjava.tddjava.services;
+package services;
 
-import br.com.tddjava.tddjava.modules.sala.services.CreateSalaService;
-import br.com.tddjava.tddjava.modules.sala.entities.Sala;
-import br.com.tddjava.tddjava.modules.numeroBloco;
+import modules.sala.services.CreateSalaService;
+import modules.sala.entities.Sala;
+import modules.numeroBloco;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
