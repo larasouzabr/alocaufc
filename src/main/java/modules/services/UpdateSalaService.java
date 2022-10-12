@@ -1,5 +1,5 @@
-package modules.sala.services;
-import modules.sala.entities.Sala;
+package modules.services;
+import modules.entities.Sala;
 
 public class UpdateSalaService {
     public Sala atualizaQtdCadeiras(Sala sala, int newQtd){

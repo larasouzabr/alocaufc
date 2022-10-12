@@ -1,7 +1,7 @@
 package test_services;
 
-import modules.sala.services.UpdateSalaService;
-import modules.sala.entities.Sala;
+import modules.services.UpdateSalaService;
+import modules.entities.Sala;
 import modules.numeroBloco;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +13,7 @@ public class AtualizarSala {
     int projetor = 2;
     boolean arCondicionado = true;
     int numSala = 1;
-    Sala sala = new Sala(numeroBloco.BLOCO1, numSala, qtdCadeiras, projetor, arCondicionado);
+    Sala sala = new Sala(null, numeroBloco.BLOCO1, numSala, qtdCadeiras, projetor, arCondicionado);
 
     @Test
     public void atualizarInformacoesRecorrentes() {
