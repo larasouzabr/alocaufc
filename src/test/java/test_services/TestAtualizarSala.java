@@ -1,5 +1,6 @@
 package test_services;
 
+import modules.services.SalaService;
 import modules.services.UpdateSalaService;
 import modules.entities.Sala;
 import modules.entities.enums.NumeroBloco;
@@ -7,22 +8,20 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AtualizarSala {
-
-    int qtdCadeiras = 5;
-    boolean projetor = true;
-    boolean arCondicionado = true;
-    int numSala = 1;
-    Sala sala = new Sala(null, NumeroBloco.BLOCO_1, numSala, qtdCadeiras, projetor, arCondicionado);
-
+public class TestAtualizarSala {
     @Test
     public void atualizarInformacoesRecorrentes() {
-        UpdateSalaService updateSalaService = new UpdateSalaService();
-        assertNotNull(updateSalaService.atualizaQtdCadeiras(sala, 8));
-        assertNotNull(updateSalaService.atualizaProjetor(sala, 1));
-        assertNotNull(updateSalaService.atualizaArCondicionado(sala, false));
+        SalaService salaService = new SalaService();
+
+        Sala sala = salaService.obterPorId(2);
+        sala.setQtdCadeiras(8);
+        sala.setProjetor(false);
+        sala.setArCondicionado(false);
+        sala.setNumBloco(NumeroBloco.BLOCO_2);
+
+        sala = salaService.update(sala);
         assertEquals(8, sala.getQtdCadeiras());
-        assertEquals(1, sala.getProjetor());
+        assertEquals(false, sala.getProjetor());
         assertEquals(false, sala.getArCondidionado());
     }
 }

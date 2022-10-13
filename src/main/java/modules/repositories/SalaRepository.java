@@ -8,7 +8,7 @@ public interface SalaRepository {
     List<Sala> obterTodos();
     Sala obterPorId(int id);
     Sala adicionar(Sala sala);
-    void atualizar(Sala sala);
+    Sala atualizar(Sala sala);
     void remover(Sala sala);
 
 }

@@ -37,8 +37,16 @@ public class SalaRepositoryJPA implements SalaRepository {
     }
 
     @Override
-    public void atualizar(Sala sala) {
+    public Sala atualizar(Sala sala) {
+        try {
+            em.getTransaction().begin();
+            em.merge(sala);
+            em.getTransaction().commit();
+        } finally {
+            em.close();
+        }
 
+        return sala;
     }
 
     @Override
