@@ -25,11 +25,13 @@ public class SalaRepositoryJPA implements SalaRepository {
 
     @Override
     public Sala adicionar(Sala sala) {
-        //em.getTransaction().begin();
-        em.persist(sala);
-        //em.getTransaction().commit();
-
-        em.close();
+        try {
+            em.getTransaction().begin();
+            em.persist(sala);
+            em.getTransaction().commit();
+        } finally {
+            em.close();
+        }
 
         return sala;
     }

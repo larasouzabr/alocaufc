@@ -1,13 +1,14 @@
 package modules.entities.enums;
 
 public enum NumeroBloco {
-    BLOCO1(1),
-    BLOCO2(2),
-    BLOCO3(3),
-    BLOCO(4);
+    BLOCO_1(1),
+    BLOCO_2(2),
+    BLOCO_3(3),
+    BLOCO_(4);
 
     private int numero;
     private NumeroBloco(int numero){
+
         this.numero = numero;
     }
 
@@ -15,13 +16,13 @@ public enum NumeroBloco {
         return numero;
     }
 
-    public static NumeroBloco valueOf(int code) {
+    public static NumeroBloco valueOf(int numero) {
         for (NumeroBloco value : NumeroBloco.values()) {
-            if (value.getNumero() == code) {
+            if (value.getNumero() == numero) {
                 return value;
             }
         }
 
-        throw new IllegalArgumentException("Invalid OrderStatus code");
+        throw new IllegalArgumentException("Bloco não pode ser nulo");
     }
 }

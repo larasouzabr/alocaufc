@@ -1,11 +1,8 @@
 package modules.entities;
 
-import modules.numeroBloco;
+import modules.entities.enums.NumeroBloco;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -16,15 +13,17 @@ public class Sala implements Serializable {
     Integer id;
 
     int qtdCadeiras;
-    int projetor;
+    @Column(nullable = false, columnDefinition = "TINYINT(1)")
+    boolean projetor;
+    @Column(nullable = false, columnDefinition = "TINYINT(1)")
     boolean arCondicionado;
-    numeroBloco numBloco;
+    int numBloco;
     int numSala;
 
     public Sala() {
 
     }
-    public Sala(Integer id, numeroBloco numBloco, int numeroSala, int qtdCadeiras, int projetor, boolean arCondicionado){
+    public Sala(Integer id, NumeroBloco numBloco, int numeroSala, int qtdCadeiras, boolean projetor, boolean arCondicionado){
         this.id = id;
         setNumBloco(numBloco);
         setNumSala(numeroSala);
@@ -44,7 +43,7 @@ public class Sala implements Serializable {
     public void setQtdCadeiras(int qtdCadeiras){
         this.qtdCadeiras = qtdCadeiras;
     }
-    public void setProjetor(int projetor){
+    public void setProjetor(boolean projetor){
         this.projetor = projetor;
     }
     public void setArCondicionado(boolean arCondicionado){
@@ -53,21 +52,23 @@ public class Sala implements Serializable {
     public void setNumSala(int numSala) {
         this.numSala = numSala;
     }
-    public void setNumBloco(numeroBloco numBloco){
-        this.numBloco = numBloco;
+    public void setNumBloco(NumeroBloco numBloco){
+        if(numBloco != null) {
+            this.numBloco = numBloco.getNumero();
+        }
     }
 
     public int getQtdCadeiras(){
         return this.qtdCadeiras;
     }
-    public int getProjetor(){
+    public boolean getProjetor(){
         return this.projetor;
     }
     public boolean getArCondidionado(){
         return this.arCondicionado;
     }
-    public numeroBloco getBloco(){
-        return this.numBloco;
+    public NumeroBloco getBloco(){
+        return NumeroBloco.valueOf(numBloco);
     }
     public int getNumSala(){
         return this.numSala;

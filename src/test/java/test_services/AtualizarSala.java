@@ -2,7 +2,7 @@ package test_services;
 
 import modules.services.UpdateSalaService;
 import modules.entities.Sala;
-import modules.numeroBloco;
+import modules.entities.enums.NumeroBloco;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,10 +10,10 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AtualizarSala {
 
     int qtdCadeiras = 5;
-    int projetor = 2;
+    boolean projetor = true;
     boolean arCondicionado = true;
     int numSala = 1;
-    Sala sala = new Sala(null, numeroBloco.BLOCO1, numSala, qtdCadeiras, projetor, arCondicionado);
+    Sala sala = new Sala(null, NumeroBloco.BLOCO_1, numSala, qtdCadeiras, projetor, arCondicionado);
 
     @Test
     public void atualizarInformacoesRecorrentes() {
