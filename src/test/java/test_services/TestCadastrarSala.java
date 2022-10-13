@@ -1,6 +1,5 @@
 package test_services;
 
-import modules.services.CreateSalaService;
 import modules.entities.Sala;
 import modules.entities.enums.NumeroBloco;
 import modules.services.SalaService;

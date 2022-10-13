@@ -40,8 +40,6 @@ public class SalaService {
     }
 
     public Sala obterPorId(int id) {
-        Sala sala = this.repository.obterPorId(id);
-
-        return sala;
+        return this.repository.obterPorId(id);
     }
 }

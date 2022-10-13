@@ -1,7 +1,6 @@
 package test_services;
 
 import modules.services.SalaService;
-import modules.services.UpdateSalaService;
 import modules.entities.Sala;
 import modules.entities.enums.NumeroBloco;
 import org.junit.jupiter.api.Test;
