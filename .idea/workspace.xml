@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface/Main.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface/css/fullpackstyling.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface/img/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/services/CreateSalaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/services/SalaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/services/SalaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/services/UpdateSalaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test_services/TestAtualizarSala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_services/TestAtualizarSala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test_services/TestCadastrarSala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_services/TestCadastrarSala.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -31,6 +33,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2Fir7gDj6FId5oXk0dhW8Ez6hcR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -42,11 +47,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/herik/codes/spring-petclinic",
+    "last_opened_file_path": "C:/Users/CLIENTE/Desktop/alocaufc/src/main/java/interface/Main.fxml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,6 +61,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "Errors"
   }
 }]]></component>
@@ -63,13 +70,15 @@
       <recent name="br.com.tddjava.tddjava.modules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\CLIENTE\Desktop\alocaufc\src\main\java" />
+      <recent name="C:\Users\CLIENTE\Desktop\alocaufc\src\main\interface\img" />
       <recent name="C:\Users\antho\OneDrive\Área de Trabalho\alocaufc\src\test\java\br\com\tddjava\tddjava\services" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestCadastrarSala">
+  <component name="RunManager">
     <configuration name="CadastrarSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alocaufc" />
       <extension name="coverage">
@@ -185,5 +194,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
