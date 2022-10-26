@@ -1,12 +1,12 @@
 package modules.controllers;
 
-import modules.controllers.registrationController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import modules.entities.Sala;
 import modules.entities.enums.NumeroBloco;
@@ -19,8 +19,9 @@ import static javafx.application.Application.launch;
 
 public class salasController implements Initializable {
 
+    public Button addSalaButton;
+
     public static void main(String[] args) {
-        launch(args);
     }
 
     @FXML
@@ -31,9 +32,6 @@ public class salasController implements Initializable {
             Stage stage = new Stage();
             stage.setTitle("Tela adicionar sala");
             stage.setScene(new Scene(root));
-            loader.<registrationController>getController()
-                    .setParentController(this);
-            stage.show();
 
         } catch (IOException ex) {
         }
