@@ -8,10 +8,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface/Main.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface/css/fullpackstyling.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaceMain/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modules/controllers/registrationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modules/controllers/salasController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/interfaceRegistration/Registration.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/modules/test_controllers/TestButtonsActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceMain/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface/css/fullpackstyling.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceMain/css/fullpackstyling.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceMain/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modules/entities/enums/NumeroBloco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/entities/enums/NumeroBloco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test_services/TestAtualizarSala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarSala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test_services/TestCadastrarSala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestCadastrarSala.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,13 +34,30 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="JavaFXApplication" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,57 +73,72 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/CLIENTE/Desktop/alocaufc/src/main/java/interface/Main.fxml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Errors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/CLIENTE/Documents/javafx-sdk-19/lib&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.12988506&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.tddjava.tddjava.modules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\CLIENTE\Desktop\alocaufc\src\main\resources\interfaceMain" />
+      <recent name="C:\Users\CLIENTE\Desktop\alocaufc\src\main\resources" />
+      <recent name="C:\Users\CLIENTE\Desktop\alocaufc\src\main\java\interfaceMain" />
       <recent name="C:\Users\CLIENTE\Desktop\alocaufc\src\main\java" />
       <recent name="C:\Users\CLIENTE\Desktop\alocaufc\src\main\interface\img" />
-      <recent name="C:\Users\antho\OneDrive\Área de Trabalho\alocaufc\src\test\java\br\com\tddjava\tddjava\services" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="CadastrarSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="alocaufc" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="interfaceMain.Main" />
+      <module name="aloca-ufc" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\CLIENTE\Documents\javafx-sdk-19\lib&quot; --add-modules javafx.controls, javafx.fxml " />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test_services.*" />
+          <option name="PATTERN" value="interfaceMain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="test_services.CadastrarSala" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAtualizarSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="alocaufc" />
+    <configuration name="interfaceRegistration.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="interfaceRegistration.Main" />
+      <module name="aloca-ufc" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\CLIENTE\Documents\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="interfaceRegistration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAtualizarSala (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aloca-ufc" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test_services.*" />
@@ -109,8 +152,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAtualizarSala.atualizarInformacoesRecorrentes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="alocaufc" />
+    <configuration name="TestCadastrarSala (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aloca-ufc" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test_services.*" />
@@ -118,9 +161,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test_services" />
-      <option name="MAIN_CLASS_NAME" value="test_services.TestAtualizarSala" />
-      <option name="METHOD_NAME" value="atualizarInformacoesRecorrentes" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="test_services.TestCadastrarSala" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,29 +182,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCadastrarSala.cadastrar_sala_com_sucesso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="alocaufc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test_services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test_services" />
-      <option name="MAIN_CLASS_NAME" value="test_services.TestCadastrarSala" />
-      <option name="METHOD_NAME" value="cadastrar_sala_com_sucesso" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.interfaceRegistration.Main" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.TestAtualizarSala (1)" />
+      <item itemvalue="JUnit.TestCadastrarSala" />
+      <item itemvalue="JUnit.TestCadastrarSala (1)" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.interfaceRegistration.Main" />
+        <item itemvalue="JUnit.TestAtualizarSala (1)" />
+        <item itemvalue="JUnit.TestCadastrarSala (1)" />
         <item itemvalue="JUnit.TestCadastrarSala" />
-        <item itemvalue="JUnit.TestAtualizarSala" />
-        <item itemvalue="JUnit.TestAtualizarSala.atualizarInformacoesRecorrentes" />
-        <item itemvalue="JUnit.TestCadastrarSala.cadastrar_sala_com_sucesso" />
-        <item itemvalue="JUnit.CadastrarSala" />
       </list>
     </recent_temporary>
   </component>
@@ -184,6 +217,12 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
+    <option featureType="dependencySupport" implementationName="java:org.openjfx:javafx-base" />
+    <option featureType="dependencySupport" implementationName="java:javax.persistence:javax.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -197,5 +236,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/alocaufc$Main.ic" NAME="Main Coverage Results" MODIFIED="1666731828151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>interfaceMain.*</FILTER>
+    </SUITE>
   </component>
 </project>

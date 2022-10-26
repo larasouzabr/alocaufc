@@ -1,4 +1,4 @@
-package test_services;
+package modules.test_services;
 
 import modules.entities.Sala;
 import modules.entities.enums.NumeroBloco;

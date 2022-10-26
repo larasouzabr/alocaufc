@@ -16,12 +16,11 @@
 
 .button2
 {
--fx-background-color : #287BB3;
--fx-background-radius :  20;
+-fx-background-color : none;
 }
 .button2:hover
 {
--fx-background-color : #524A7B ;
+  -fx-text-fill: black ;
 -fx-background-radius :  20;
 }
 .button2:pressed
