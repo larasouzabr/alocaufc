@@ -1,10 +1,13 @@
 package modules.entities.enums;
 
+import java.util.Arrays;
+import java.util.List;
+
 public enum NumeroBloco {
     BLOCO_1(1),
     BLOCO_2(2),
     BLOCO_3(3),
-    BLOCO_(4);
+    BLOCO_4(4);
 
     private int numero;
     private NumeroBloco(int numero){
@@ -25,4 +28,6 @@ public enum NumeroBloco {
 
         throw new IllegalArgumentException("Bloco não pode ser nulo");
     }
+
+
 }

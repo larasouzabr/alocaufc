@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="458.0" prefWidth="388.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegistrationController.registrationController">
+    <children>
+        <Label layoutX="99.0" layoutY="11.0" prefHeight="34.0" prefWidth="203.0" text="Adicionar Sala">
+            <font>
+                <Font name="System Bold" size="23.0" />
+            </font>
+        </Label>
+      <Button layoutX="362.0" layoutY="1.0" mnemonicParsing="false" text="X" />
+      <FlowPane alignment="CENTER" columnHalignment="RIGHT" layoutX="201.0" layoutY="400.0" prefHeight="44.0" prefWidth="176.0" prefWrapLength="356.0" style="-fx-vgap: 1; -fx-hgap: 15;">
+         <children>
+            <Button alignment="BOTTOM_LEFT" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-color: #E56C78;" text="Cancelar" textFill="WHITE" />
+            <Button alignment="BOTTOM_LEFT" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Salvar" />
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="9.3" radius="5.32" spread="0.04" width="13.98">
+               <color>
+                  <Color opacity="0.3586626648902893" />
+               </color>
+            </DropShadow>
+         </effect>
+      </FlowPane>
+      <HBox alignment="TOP_CENTER" layoutY="76.0" prefHeight="210.0" prefWidth="388.0" spacing="23.0" AnchorPane.bottomAnchor="172.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="76.0">
+         <children>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="210.0" prefWidth="176.0" spacing="1.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                          <Label fx:id="numeroSalaLabel" prefHeight="27.0" prefWidth="219.0" text="Numero da sala">
+                              <font>
+                                  <Font name="System Bold" size="14.0" />
+                              </font>
+                          </Label>
+                        <TextField fx:id="CampoNumeroSala" prefHeight="26.0" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="numeroSalaLabel1" prefHeight="27.0" prefWidth="188.0" text="Quantidade de cadeiras">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="CampoNumeroSala1" prefHeight="26.0" prefWidth="176.0" />
+                     </children>
+                  </VBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <VBox prefHeight="174.0" prefWidth="176.0" spacing="9.0">
+               <children>
+                  <VBox prefHeight="134.0" prefWidth="176.0">
+                     <children>
+                        <Label fx:id="blocoLabel1" alignment="CENTER" contentDisplay="BOTTOM" graphicTextGap="20.0" prefHeight="27.0" text="Bloco">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="selectBloco" prefHeight="26.0" prefWidth="160.0" promptText="Selecione um bloco" visibleRowCount="4" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="141.0" prefWidth="176.0">
+                     <children>
+                          <Label id="possuiProjetorLabel" fx:id="blocoLabel" contentDisplay="BOTTOM" graphicTextGap="20.0" prefHeight="27.0" prefWidth="188.0" text="Possui projetor?">
+                              <font>
+                                  <Font name="System Bold" size="14.0" />
+                              </font>
+                          </Label>
+                        <ComboBox fx:id="selectProjetorSituation" prefHeight="26.0" prefWidth="160.0" promptText="Selecione uma opção" visibleRowCount="4" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="W_RESIZE" />
+         </cursor>
+         <padding>
+            <Insets right="-15.0" />
+         </padding>
+      </HBox>
+      <VBox layoutX="113.0" layoutY="274.0" prefHeight="98.0" prefWidth="176.0">
+         <children>
+            <Label id="possuiProjetorLabel" fx:id="arCondLabel" contentDisplay="BOTTOM" graphicTextGap="20.0" prefHeight="27.0" prefWidth="178.0" text="Possui ar-condicionado?">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="selectAirCondSituation" prefHeight="26.0" prefWidth="160.0" promptText="Selecione uma opção" visibleRowCount="4" />
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
