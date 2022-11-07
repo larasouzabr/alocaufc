@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TestAtualizarSala {
     @Test
-    public void atualizarInformacoesRecorrentes() {
+    public void atualiza_informacoes_recorrentes() {
         SalaService salaService = new SalaService();
 
         Sala sala = salaService.obterPorId(2);

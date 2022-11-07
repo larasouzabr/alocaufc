@@ -27,7 +27,7 @@ public class registrationController implements Initializable {
     public salasController salasController;
 
     @FXML
-    void closeButtonAction(ActionEvent event){
+   void closeButtonAction(ActionEvent event){
 
         final Node source = (Node) event.getSource();
         final Stage stage = (Stage) source.getScene().getWindow();
