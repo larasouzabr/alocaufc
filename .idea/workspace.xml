@@ -8,13 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modules/entities/Aula.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modules/repositories/AulaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modules/repositories/impl/AulaRepositoryJPA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modules/services/AulaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaceMain/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaceMain/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/controllers/salasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/controllers/salasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceMain/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceMain/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceMain/css/fullpackstyling.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceMain/css/fullpackstyling.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modules/entities/Sala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/entities/Sala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modules/entities/enums/DiaDaSemana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/entities/enums/DiaDaSemana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAlocarAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAlocarAula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarAula.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +30,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="FxmlFile" />
         <option value="JavaFXApplication" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -55,7 +60,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Fir7gDj6FId5oXk0dhW8Ez6hcR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -100,90 +105,101 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="interfaceMain.Main" />
-      <module name="aloca-ufc" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\CLIENTE\Documents\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+  <component name="RunManager" selected="JUnit.TestAlocarAula.erro_ao_adicionar_aula_em_horario_lotado">
+    <configuration name="TestAlocarAula.alocar_aula_em_sala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="interfaceRegistration.*" />
+          <option name="PATTERN" value="modules.test_services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="modules.test_services" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAlocarAula" />
+      <option name="METHOD_NAME" value="alocar_aula_em_sala" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="i" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <module name="aloca-ufc" />
+    <configuration name="TestAlocarAula.erro_ao_adicionar_aula_em_horario_lotado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="interfaceMain.*" />
+          <option name="PATTERN" value="modules.test_services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="modules.test_services" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAlocarAula" />
+      <option name="METHOD_NAME" value="erro_ao_adicionar_aula_em_horario_lotado" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="salasController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="modules.controllers.salasController" />
-      <module name="aloca-ufc" />
+    <configuration name="TestAlocarAula.erro_ao_alocar_aula_com_dia_nulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="modules.controllers.*" />
+          <option name="PATTERN" value="modules.test_services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="modules.test_services" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAlocarAula" />
+      <option name="METHOD_NAME" value="erro_ao_alocar_aula_com_dia_nulo" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAtualizarSala (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="aloca-ufc" />
+    <configuration name="TestAlocarAula.erro_ao_alocar_aula_com_sala_nula" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test_services.*" />
+          <option name="PATTERN" value="modules.test_services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test_services" />
-      <option name="MAIN_CLASS_NAME" value="test_services.TestAtualizarSala" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="modules.test_services" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAlocarAula" />
+      <option name="METHOD_NAME" value="erro_ao_alocar_aula_com_sala_nula" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCadastrarSala (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="aloca-ufc" />
+    <configuration name="TestCadastrarSala.cadastrar_sala_com_sucesso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test_services.*" />
+          <option name="PATTERN" value="modules.test_services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test_services" />
-      <option name="MAIN_CLASS_NAME" value="test_services.TestCadastrarSala" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="modules.test_services" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestCadastrarSala" />
+      <option name="METHOD_NAME" value="cadastrar_sala_com_sucesso" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.salasController" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.i" />
-      <item itemvalue="JUnit.TestAtualizarSala (1)" />
-      <item itemvalue="JUnit.TestCadastrarSala (1)" />
+      <item itemvalue="JUnit.TestAlocarAula.alocar_aula_em_sala" />
+      <item itemvalue="JUnit.TestAlocarAula.erro_ao_adicionar_aula_em_horario_lotado" />
+      <item itemvalue="JUnit.TestAlocarAula.erro_ao_alocar_aula_com_dia_nulo" />
+      <item itemvalue="JUnit.TestAlocarAula.erro_ao_alocar_aula_com_sala_nula" />
+      <item itemvalue="JUnit.TestCadastrarSala.cadastrar_sala_com_sucesso" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.i" />
-        <item itemvalue="Application.salasController" />
-        <item itemvalue="JUnit.TestAtualizarSala (1)" />
-        <item itemvalue="JUnit.TestCadastrarSala (1)" />
+        <item itemvalue="JUnit.TestAlocarAula.erro_ao_adicionar_aula_em_horario_lotado" />
+        <item itemvalue="JUnit.TestAlocarAula.erro_ao_alocar_aula_com_dia_nulo" />
+        <item itemvalue="JUnit.TestAlocarAula.erro_ao_alocar_aula_com_sala_nula" />
+        <item itemvalue="JUnit.TestAlocarAula.alocar_aula_em_sala" />
+        <item itemvalue="JUnit.TestCadastrarSala.cadastrar_sala_com_sucesso" />
       </list>
     </recent_temporary>
   </component>

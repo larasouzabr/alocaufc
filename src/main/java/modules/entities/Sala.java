@@ -5,6 +5,7 @@ import modules.entities.enums.NumeroBloco;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class Sala implements Serializable {
@@ -19,6 +20,9 @@ public class Sala implements Serializable {
     boolean arCondicionado;
     int numBloco;
     int numSala;
+
+    @OneToMany(mappedBy = "sala")
+    private Set<Aula> aulas;
 
     public Sala() {
 
@@ -72,6 +76,14 @@ public class Sala implements Serializable {
     }
     public int getNumSala(){
         return this.numSala;
+    }
+
+    public Set<Aula> getAulas() {
+        return aulas;
+    }
+
+    public void setAulas(Set<Aula> aulas) {
+        this.aulas = aulas;
     }
 
     @Override
