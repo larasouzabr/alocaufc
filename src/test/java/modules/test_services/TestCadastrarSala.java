@@ -37,7 +37,7 @@ class TestCadastrarSala {
     public void erro_ao_criar_sala_que_ja_existe() {
         SalaService salaService = new SalaService();
 
-        Sala sala = salaService.obterPorId(2);
+        Sala sala = salaService.obterPorId(1);
 
         Error error = assertThrows(Error.class, () -> salaService.create(sala));
         assertEquals("Sala já cadastrada", error.getMessage());
