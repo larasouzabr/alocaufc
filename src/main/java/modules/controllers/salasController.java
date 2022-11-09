@@ -1,5 +1,6 @@
 package modules.controllers;
 
+import interfaceMain.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,12 +11,11 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import modules.entities.Sala;
 import modules.entities.enums.NumeroBloco;
+import modules.services.SalaService;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import static javafx.application.Application.launch;
 
 public class salasController implements Initializable {
 
@@ -25,26 +25,34 @@ public class salasController implements Initializable {
     }
 
     @FXML
-    void salaAddButtonAction(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Registration.fxml"));
-            Parent root = (Parent) loader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Tela adicionar sala");
-            stage.setScene(new Scene(root));
-
-        } catch (IOException ex) {
-        }
-
+    void salaAddButtonAction(ActionEvent event) throws IOException {
+        String caminhoPagina = "/interfaceRegistration/Registration.fxml";
+        FXMLLoader fxmlLoader = new FXMLLoader(salasController.class.getResource(caminhoPagina));
+            Scene scene = new Scene(fxmlLoader.load(), 388, 458);
+            Stage newStage = new Stage();
+            newStage.setTitle("Registrar Sala");
+            newStage.setScene(scene);
+            newStage.show();
     }
     // method receives parameters from add window
-    public void addNewSala(int id, NumeroBloco numBloco, int numeroSala, int qtdCadeiras, boolean projetor, boolean arCondicionado){
-        Sala sala = new Sala(id,numBloco,numeroSala,qtdCadeiras,projetor, arCondicionado);
-
+    public void addNewSala(NumeroBloco numBloco, int numeroSala, int qtdCadeiras, boolean projetor, boolean arCondicionado){
+        SalaService service = new SalaService();
+        Sala sala = new Sala(null,numBloco,numeroSala,qtdCadeiras,projetor, arCondicionado);
+        service.create(sala);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    }
+
+    public void checkBlocoInfo(ActionEvent actionEvent) throws IOException {
+        String caminhoPagina = "/interfaceSala/sala.fxml";
+        FXMLLoader fxmlLoader = new FXMLLoader(salasController.class.getResource(caminhoPagina));
+        Scene scene = new Scene(fxmlLoader.load(), 1044, 590);
+        Stage newStage = new Stage();
+        newStage.setTitle("Salas do bloco 1");
+        newStage.setScene(scene);
+        newStage.show();
     }
 }

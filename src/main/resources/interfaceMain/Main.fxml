@@ -25,7 +25,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="142.0" prefWidth="282.0" styleClass="button1" text="Bloco 1" textFill="WHITE">
+                  <Button mnemonicParsing="false" prefHeight="142.0" prefWidth="282.0" styleClass="button1"  onAction="#checkBlocoInfo" text="Bloco 1" textFill="WHITE">
                      <font>
                         <Font name="Franklin Gothic Book" size="41.0" />
                      </font>
