@@ -3,6 +3,7 @@ package modules.services;
 import modules.entities.Sala;
 import modules.repositories.SalaRepository;
 import modules.repositories.impl.SalaRepositoryJPA;
+import modules.utils.EntityManagerUtil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -12,8 +13,7 @@ public class SalaService {
     private final SalaRepository repository;
 
     public SalaService(){
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("aloca-ufc");
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerUtil.get();
         this.repository = new SalaRepositoryJPA(em);
     }
 

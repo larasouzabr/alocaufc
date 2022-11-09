@@ -11,9 +11,7 @@ import javax.persistence.Persistence;
 public class AulaInsertValidation {
     private final AulaRepository repository;
 
-    public AulaInsertValidation(){
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("aloca-ufc");
-        EntityManager em = emf.createEntityManager();
+    public AulaInsertValidation(EntityManager em){
         this.repository = new AulaRepositoryJPA(em);
     }
 

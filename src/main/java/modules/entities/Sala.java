@@ -13,12 +13,15 @@ public class Sala implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
 
+    @Column(name = "qtd_cadeiras")
     int qtdCadeiras;
     @Column(nullable = false, columnDefinition = "TINYINT(1)")
     boolean projetor;
-    @Column(nullable = false, columnDefinition = "TINYINT(1)")
+    @Column(name = "ar_condicionado", nullable = false, columnDefinition = "TINYINT(1)")
     boolean arCondicionado;
+    @Column(name = "num_bloco")
     int numBloco;
+    @Column(name = "num_sala")
     int numSala;
 
     @OneToMany(mappedBy = "sala")

@@ -29,8 +29,8 @@ public class SalaRepositoryJPA implements SalaRepository {
             em.getTransaction().begin();
             em.persist(sala);
             em.getTransaction().commit();
-        } finally {
-            em.close();
+        } catch(Exception e) {
+            em.getTransaction().rollback();
         }
 
         return sala;
@@ -42,8 +42,8 @@ public class SalaRepositoryJPA implements SalaRepository {
             em.getTransaction().begin();
             em.merge(sala);
             em.getTransaction().commit();
-        } finally {
-            em.close();
+        } catch(Exception e) {
+            em.getTransaction().rollback();
         }
 
         return sala;

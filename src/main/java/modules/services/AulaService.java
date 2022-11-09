@@ -1,9 +1,11 @@
 package modules.services;
 
 import modules.entities.Aula;
+import modules.entities.Sala;
 import modules.repositories.AulaRepository;
 import modules.repositories.impl.AulaRepositoryJPA;
 import modules.services.validation.AulaInsertValidation;
+import modules.utils.EntityManagerUtil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -14,10 +16,9 @@ public class AulaService {
     private final AulaInsertValidation validator;
 
     public AulaService(){
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("aloca-ufc");
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerUtil.get();
         this.repository = new AulaRepositoryJPA(em);
-        this.validator = new AulaInsertValidation();
+        this.validator = new AulaInsertValidation(em);
     }
 
     public Aula alocar(Aula aula) {
@@ -47,5 +48,19 @@ public class AulaService {
             throw new IllegalStateException("teste");
         }
 
+    }
+
+    public Aula obterPorId(int id) {
+        return repository.obterPorId(id);
+    }
+
+    public Aula update(Aula aula) {
+        Aula aulaExistente = this.repository.obterPorId(aula.getId());
+
+        if(!validator.isValid(aula)){
+            throw new IllegalArgumentException("Sala já está lotada para o horário escolhido");
+        }
+
+        return repository.atualizar(aulaExistente);
     }
 }

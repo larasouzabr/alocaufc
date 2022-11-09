@@ -12,7 +12,7 @@ public class TestAtualizarSala {
     public void atualiza_informacoes_recorrentes() {
         SalaService salaService = new SalaService();
 
-        Sala sala = salaService.obterPorId(2);
+        Sala sala = salaService.obterPorId(1);
         sala.setQtdCadeiras(8);
         sala.setProjetor(false);
         sala.setArCondicionado(false);

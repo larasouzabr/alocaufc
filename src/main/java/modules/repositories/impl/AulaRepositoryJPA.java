@@ -2,7 +2,6 @@ package modules.repositories.impl;
 
 import modules.entities.Aula;
 import modules.repositories.AulaRepository;
-import org.hibernate.exception.ConstraintViolationException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -31,18 +30,26 @@ public class AulaRepositoryJPA implements AulaRepository {
             em.getTransaction().begin();
             em.persist(aula);
             em.getTransaction().commit();
-        } catch(ConstraintViolationException e) {
-            throw new IllegalStateException("Teste");
-        } finally {
-            em.close();
+        } catch(Exception e) {
+            em.getTransaction().rollback();
         }
+
+
 
         return aula;
     }
 
     @Override
-    public Aula atualizar(Aula sala) {
-        return null;
+    public Aula atualizar(Aula aula) {
+        try {
+            em.getTransaction().begin();
+            em.merge(aula);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            em.getTransaction().rollback();
+        }
+
+    return aula;
     }
 
     @Override
@@ -61,7 +68,7 @@ public class AulaRepositoryJPA implements AulaRepository {
             a.setParameter("horarioAula", aula.getHorarioAula());
 
             return a.getSingleResult();
-        }catch(NoResultException e) {
+        } catch(NoResultException e) {
             return null;
         }
 

@@ -8,12 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/modules/services/validation/AulaInsertValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modules/utils/EntityManagerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/070495e9-74d0-4fb1-9a25-ee450be76168.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/070495e9-74d0-4fb1-9a25-ee450be76168.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/repositories/AulaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/repositories/AulaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modules/entities/Sala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/entities/Sala.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modules/repositories/impl/AulaRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/repositories/impl/AulaRepositoryJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modules/repositories/impl/SalaRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/repositories/impl/SalaRepositoryJPA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modules/services/AulaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/services/AulaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/test_services/TestCadastrarSala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestCadastrarSala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modules/services/SalaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/services/SalaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modules/services/validation/AulaInsertValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/services/validation/AulaInsertValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarAula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarSala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarSala.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +105,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestAlocarAula">
+  <component name="RunManager" selected="JUnit.TestAtualizarAula">
     <configuration name="TestAlocarAula" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alocaufc" />
       <extension name="coverage">
@@ -115,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAlocarAula.erro_ao_adicionar_aula_em_horario_lotado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAtualizarAula" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alocaufc" />
       <extension name="coverage">
         <pattern>
@@ -124,14 +130,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modules.test_services" />
-      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAlocarAula" />
-      <option name="METHOD_NAME" value="erro_ao_adicionar_aula_em_horario_lotado" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAtualizarAula" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAtualizarAula.erro_ao_atualizar_aula_para_sala_lotada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modules.test_services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modules.test_services" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAtualizarAula" />
+      <option name="METHOD_NAME" value="erro_ao_atualizar_aula_para_sala_lotada" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAlocarAula.erro_ao_alocar_aula_com_dia_nulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAtualizarSala.atualiza_informacoes_recorrentes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alocaufc" />
       <extension name="coverage">
         <pattern>
@@ -140,8 +161,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modules.test_services" />
-      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAlocarAula" />
-      <option name="METHOD_NAME" value="erro_ao_alocar_aula_com_dia_nulo" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAtualizarSala" />
+      <option name="METHOD_NAME" value="atualiza_informacoes_recorrentes" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,36 +183,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCadastrarSala.erro_ao_criar_sala_que_ja_existe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="alocaufc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modules.test_services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modules.test_services" />
-      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestCadastrarSala" />
-      <option name="METHOD_NAME" value="erro_ao_criar_sala_que_ja_existe" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="JUnit.TestAtualizarSala.atualiza_informacoes_recorrentes" />
+      <item itemvalue="JUnit.TestAtualizarAula" />
+      <item itemvalue="JUnit.TestAtualizarAula.erro_ao_atualizar_aula_para_sala_lotada" />
       <item itemvalue="JUnit.TestAlocarAula" />
       <item itemvalue="JUnit.TestCadastrarSala" />
-      <item itemvalue="JUnit.TestCadastrarSala.erro_ao_criar_sala_que_ja_existe" />
-      <item itemvalue="JUnit.TestAlocarAula.erro_ao_adicionar_aula_em_horario_lotado" />
-      <item itemvalue="JUnit.TestAlocarAula.erro_ao_alocar_aula_com_dia_nulo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestAtualizarAula" />
         <item itemvalue="JUnit.TestAlocarAula" />
         <item itemvalue="JUnit.TestCadastrarSala" />
-        <item itemvalue="JUnit.TestCadastrarSala.erro_ao_criar_sala_que_ja_existe" />
-        <item itemvalue="JUnit.TestAlocarAula.erro_ao_adicionar_aula_em_horario_lotado" />
-        <item itemvalue="JUnit.TestAlocarAula.erro_ao_alocar_aula_com_dia_nulo" />
+        <item itemvalue="JUnit.TestAtualizarSala.atualiza_informacoes_recorrentes" />
+        <item itemvalue="JUnit.TestAtualizarAula.erro_ao_atualizar_aula_para_sala_lotada" />
       </list>
     </recent_temporary>
   </component>
@@ -209,6 +214,7 @@
       <workItem from="1665610260516" duration="9074000" />
       <workItem from="1667925577179" duration="3513000" />
       <workItem from="1667950638184" duration="3038000" />
+      <workItem from="1667990666759" duration="1618000" />
     </task>
     <servers />
   </component>
