@@ -10,5 +10,6 @@ public interface AulaRepository {
         Aula adicionar(Aula sala);
         Aula atualizar(Aula sala);
         void remover(Aula sala);
+        Aula findByAvailability(Aula aula);
 
 }
