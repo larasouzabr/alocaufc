@@ -20,29 +20,30 @@ public class salaController implements Initializable{
     public TableView<Aula> tabelaAulasSala;
     public TableColumn<Sala, Integer> numSalaCell;
     public TableColumn<Sala, Integer> qtdCadeirasCell;
-    public TableColumn<Sala, Integer> arCondCell;
-    public TableColumn<Sala, Integer> projetorCell;
-    public TableColumn Açoes;
+    public TableColumn<Sala, Boolean> projetorCell;
     public TableColumn<Aula,String> horarioCell;
     public TableColumn<Aula,Integer> diaDaSemanaCell;
     public TableColumn<Aula, String> disciplinaCell;
     public TableColumn<Aula,String> turmaCell;
     public ChoiceBox filterChoiceBox;
     public TextField searchField;
+    public TableColumn acoesCell;
+    public TableColumn<Sala, Boolean> arCondCell;
 
-    ObservableList<Sala> list = FXCollections.observableArrayList(
+    ObservableList<Sala> listSala = FXCollections.observableArrayList(
       new Sala(null, NumeroBloco.BLOCO_1, 3 , 22, true , true),
-             new Sala(null, NumeroBloco.BLOCO_1, 4 , 40, true , true)
+            new Sala(null, NumeroBloco.BLOCO_1, 5 , 33, false , true)  ,
+            new Sala(null, NumeroBloco.BLOCO_1, 2 , 50, true , true)
     );
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        numSalaCell.setCellValueFactory(new PropertyValueFactory<Sala,Integer>("Sala"));
-        qtdCadeirasCell.setCellValueFactory(new PropertyValueFactory<Sala,Integer>("Cadeiras"));
-        arCondCell.setCellValueFactory(new PropertyValueFactory<Sala,Integer>("arcond"));
-        projetorCell.setCellValueFactory(new PropertyValueFactory<Sala,Integer>("projetor"));
+        numSalaCell.setCellValueFactory(new PropertyValueFactory<Sala,Integer>("numSala"));
+        qtdCadeirasCell.setCellValueFactory(new PropertyValueFactory<Sala,Integer>("qtdCadeiras"));
+        projetorCell.setCellValueFactory(new PropertyValueFactory<Sala,Boolean>("projetor"));
+        arCondCell.setCellValueFactory(new PropertyValueFactory<Sala,Boolean>("arCondicionado"));
 
-        tabelaSalas.setItems(list);
+        tabelaSalas.setItems(listSala);
 
     }
 }
