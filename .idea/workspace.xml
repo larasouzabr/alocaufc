@@ -8,18 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/modules/utils/EntityManagerUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/070495e9-74d0-4fb1-9a25-ee450be76168.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/070495e9-74d0-4fb1-9a25-ee450be76168.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/entities/Sala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/entities/Sala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/repositories/impl/AulaRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/repositories/impl/AulaRepositoryJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/repositories/impl/SalaRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/repositories/impl/SalaRepositoryJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/services/AulaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/services/AulaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/services/SalaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/services/SalaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/services/validation/AulaInsertValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/services/validation/AulaInsertValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarAula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarSala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarSala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modules/controllers/salaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/controllers/salaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +43,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -105,24 +96,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestAtualizarAula">
-    <configuration name="TestAlocarAula" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="alocaufc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modules.test_services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modules.test_services" />
-      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAlocarAula" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestCadastrarSala">
     <configuration name="TestAtualizarAula" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="alocaufc" />
+      <module name="aloca-ufc" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="modules.test_services.*" />
@@ -136,24 +112,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAtualizarAula.erro_ao_atualizar_aula_para_sala_lotada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="alocaufc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modules.test_services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modules.test_services" />
-      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAtualizarAula" />
-      <option name="METHOD_NAME" value="erro_ao_atualizar_aula_para_sala_lotada" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestAtualizarSala.atualiza_informacoes_recorrentes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="alocaufc" />
+    <configuration name="TestAtualizarSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aloca-ufc" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="modules.test_services.*" />
@@ -162,14 +122,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="modules.test_services" />
       <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAtualizarSala" />
-      <option name="METHOD_NAME" value="atualiza_informacoes_recorrentes" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="TestCadastrarSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="alocaufc" />
+      <module name="aloca-ufc" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="modules.test_services.*" />
@@ -183,20 +142,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestCadastrarSala.cadastrar_sala_com_sucesso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aloca-ufc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modules.test_services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modules.test_services" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestCadastrarSala" />
+      <option name="METHOD_NAME" value="cadastrar_sala_com_sucesso" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aloca-ufc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modules.test_services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modules.test_services" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestCadastrarSala" />
+      <option name="METHOD_NAME" value="erro_ao_cadastrar_sala_com_bloco_nulo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.TestAtualizarSala.atualiza_informacoes_recorrentes" />
-      <item itemvalue="JUnit.TestAtualizarAula" />
-      <item itemvalue="JUnit.TestAtualizarAula.erro_ao_atualizar_aula_para_sala_lotada" />
-      <item itemvalue="JUnit.TestAlocarAula" />
       <item itemvalue="JUnit.TestCadastrarSala" />
+      <item itemvalue="JUnit.TestAtualizarSala" />
+      <item itemvalue="JUnit.TestCadastrarSala.cadastrar_sala_com_sucesso" />
+      <item itemvalue="JUnit.TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" />
+      <item itemvalue="JUnit.TestAtualizarAula" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestAtualizarAula" />
-        <item itemvalue="JUnit.TestAlocarAula" />
         <item itemvalue="JUnit.TestCadastrarSala" />
-        <item itemvalue="JUnit.TestAtualizarSala.atualiza_informacoes_recorrentes" />
-        <item itemvalue="JUnit.TestAtualizarAula.erro_ao_atualizar_aula_para_sala_lotada" />
+        <item itemvalue="JUnit.TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" />
+        <item itemvalue="JUnit.TestAtualizarSala" />
+        <item itemvalue="JUnit.TestAtualizarAula" />
+        <item itemvalue="JUnit.TestCadastrarSala.cadastrar_sala_com_sucesso" />
       </list>
     </recent_temporary>
   </component>

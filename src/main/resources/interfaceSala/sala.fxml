@@ -24,13 +24,13 @@
                 </Text>
             </children>
         </Pane>
-      <TableView layoutY="136.0" prefHeight="416.0" prefWidth="516.0">
+      <TableView layoutY="136.0" prefHeight="416.0" prefWidth="516.0" fx:id="tabelaSalas">
         <columns>
           <TableColumn fx:id="numSalaCell" prefWidth="74.39999580383301" text="Sala" />
             <TableColumn fx:id="qtdCadeirasCell" prefWidth="140.79998016357422" text="Quantidade de cadeiras " />
             <TableColumn fx:id="arCondCell" prefWidth="99.20002746582031" text="Ar-condicionado" />
             <TableColumn fx:id="projetorCell" prefWidth="60.0" text="Projetor" />
-            <TableColumn fx:id="projetorCell1" prefWidth="147.20001220703125" text="Ações" />
+            <TableColumn fx:id="acoesCell" prefWidth="147.20001220703125" text="Ações" />
         </columns>
       </TableView>
       <VBox alignment="TOP_CENTER" layoutX="528.0" layoutY="94.0" prefHeight="499.0" prefWidth="516.0" style="-fx-background-color: #E56C78;">
@@ -40,7 +40,7 @@
                   <Font name="Gill Sans MT Condensed" size="25.0" />
                </font>
             </Label>
-            <TableView prefHeight="430.0" prefWidth="502.0">
+            <TableView prefHeight="430.0" prefWidth="502.0" fx:id="tabelaAulasSala">
               <columns>
                   <TableColumn fx:id="horarioCell" prefWidth="123.199951171875" text="Horário" />
                 <TableColumn fx:id="diaDaSemanaCell" prefWidth="136.800048828125" text="Dia da Semana" />
