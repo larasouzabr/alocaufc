@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="AutoImportSettings">
@@ -8,6 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/CLIENTE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modules/controllers/salaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/controllers/salaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" afterDir="false" />
@@ -29,6 +31,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dbintegration" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
@@ -61,26 +68,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-        &quot;keyToString&quot;: {
-        &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-        &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-        &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-        &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-        &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-        &quot;last_opened_file_path&quot;: &quot;C:/Users/CLIENTE/Documents/javafx-sdk-19/lib&quot;,
-        &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-        &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-        &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-        &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-        &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-        &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-        &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-        &quot;project.structure.side.proportion&quot;: &quot;0.12988506&quot;,
-        &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-        &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
-        }
-        }</component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/CLIENTE/Documents/javafx-sdk-19/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.12988506",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.tddjava.tddjava.modules" />
@@ -96,7 +103,21 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestCadastrarSala">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="interfaceMain.Main" />
+      <module name="aloca-ufc" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\CLIENTE\Documents\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="interfaceMain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestAtualizarAula" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="aloca-ufc" />
       <extension name="coverage">
@@ -142,22 +163,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCadastrarSala.cadastrar_sala_com_sucesso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="aloca-ufc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modules.test_services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modules.test_services" />
-      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestCadastrarSala" />
-      <option name="METHOD_NAME" value="cadastrar_sala_com_sucesso" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="aloca-ufc" />
       <extension name="coverage">
@@ -175,19 +180,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.TestCadastrarSala" />
       <item itemvalue="JUnit.TestAtualizarSala" />
-      <item itemvalue="JUnit.TestCadastrarSala.cadastrar_sala_com_sucesso" />
       <item itemvalue="JUnit.TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" />
       <item itemvalue="JUnit.TestAtualizarAula" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestCadastrarSala" />
         <item itemvalue="JUnit.TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" />
         <item itemvalue="JUnit.TestAtualizarSala" />
         <item itemvalue="JUnit.TestAtualizarAula" />
-        <item itemvalue="JUnit.TestCadastrarSala.cadastrar_sala_com_sucesso" />
       </list>
     </recent_temporary>
   </component>
@@ -239,6 +244,11 @@
           <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/modules/repositories/impl/SalaRepositoryJPA.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
