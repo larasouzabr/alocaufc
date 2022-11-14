@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="manageStudents" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modules.controllers.salaController">
+    <children>
+        <Pane prefHeight="94.0" prefWidth="1044.0" style="-fx-background-color: #1976D2;" stylesheets="@css/RegStudent.css">
+            <children>
+                <Text fill="WHITE" layoutX="368.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bloco 1" textAlignment="CENTER">
+                    <font>
+                        <Font name="BebasNeue" size="50.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+      <TableView layoutY="136.0" prefHeight="416.0" prefWidth="516.0" fx:id="tabelaSalas">
+        <columns>
+          <TableColumn fx:id="numSalaCell" prefWidth="74.39999580383301" text="Sala" />
+            <TableColumn fx:id="qtdCadeirasCell" prefWidth="140.79998016357422" text="Quantidade de cadeiras " />
+            <TableColumn fx:id="arcondtCell" prefWidth="99.20002746582031" text="Ar-condicionado" />
+            <TableColumn fx:id="projetorCell" prefWidth="60.0" text="Projetor" />
+            <TableColumn fx:id="acoesCell" prefWidth="147.20001220703125" text="Ações" />
+        </columns>
+      </TableView>
+      <VBox alignment="TOP_CENTER" layoutX="528.0" layoutY="94.0" prefHeight="499.0" prefWidth="516.0" style="-fx-background-color: #E56C78;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="228.0" text="Alocação por Sala" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Gill Sans MT Condensed" size="25.0" />
+               </font>
+            </Label>
+            <TableView prefHeight="430.0" prefWidth="502.0" fx:id="tabelaAulasSala">
+              <columns>
+                  <TableColumn fx:id="horarioCell" prefWidth="123.199951171875" text="Horário" />
+                <TableColumn fx:id="diaDaSemanaCell" prefWidth="136.800048828125" text="Dia da Semana" />
+                <TableColumn fx:id="disciplinaCell" prefWidth="129.5999755859375" text="Disciplina" />
+                  <TableColumn fx:id="turmaCell" prefWidth="112.00003662109373" text="Turma" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <HBox layoutX="14.0" layoutY="100.0" prefHeight="30.0" prefWidth="346.0">
+         <children>
+            <ChoiceBox fx:id="filterChoiceBox" prefHeight="29.0" prefWidth="149.0" />
+            <TextField fx:id="searchField" prefHeight="26.0" prefWidth="190.0" promptText="pesquise aqui">
+               <HBox.margin>
+                  <Insets left="6.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
