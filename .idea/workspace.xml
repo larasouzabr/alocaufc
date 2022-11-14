@@ -8,12 +8,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+ test-interface
+    <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="" />
+
     <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/dictionaries/CLIENTE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modules/controllers/salaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/controllers/salaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" afterDir="false" />
     </list>
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,10 +31,16 @@
         <option value="JavaFXApplication" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="dbintegration" />
@@ -68,6 +78,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/eeepv/Documents/VINICIUS/academico-ufc/projetos/alocaufc/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/CLIENTE/Documents/javafx-sdk-19/lib&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.12988506&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  }
+}</component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
@@ -99,10 +136,23 @@
       <recent name="C:\Users\CLIENTE\Desktop\alocaufc\src\main\java" />
       <recent name="C:\Users\CLIENTE\Desktop\alocaufc\src\main\interface\img" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="interfaceMain" />
+    </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="interfaceMain.Main" />
+      <module name="alocaufc" />
+
+  <component name="RunManager" selected="JUnit.TestCadastrarSala">
+    <configuration name="TestAtualizarAula" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="interfaceMain.Main" />
@@ -114,40 +164,77 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="modules.test_services" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAtualizarAula" />
+      <option name="TEST_OBJECT" value="class" />
+ make-classroom-tab
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+ test-interface
+    <configuration name="MainTest.testEnglishInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
+
+    <configuration name="TestAtualizarSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
     <configuration name="TestAtualizarAula" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="aloca-ufc" />
+ make-classroom-tab
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="modules.test_services.*" />
+          <option name="PATTERN" value="interfaceMain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+ test-interface
+      <option name="PACKAGE_NAME" value="interfaceMain" />
+      <option name="MAIN_CLASS_NAME" value="interfaceMain.MainTest" />
+      <option name="METHOD_NAME" value="testEnglishInput" />
+      <option name="TEST_OBJECT" value="method" />
+
       <option name="PACKAGE_NAME" value="modules.test_services" />
       <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAtualizarAula" />
       <option name="TEST_OBJECT" value="class" />
+ make-classroom-tab
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="TestAtualizarSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+ test-interface
+    <configuration name="MainTest.testStartInterface" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
+
+    <configuration name="TestCadastrarSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="aloca-ufc" />
+ make-classroom-tab
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="modules.test_services.*" />
+          <option name="PATTERN" value="interfaceMain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+ test-interface
+      <option name="PACKAGE_NAME" value="interfaceMain" />
+      <option name="MAIN_CLASS_NAME" value="interfaceMain.MainTest" />
+      <option name="METHOD_NAME" value="testStartInterface" />
+      <option name="TEST_OBJECT" value="method" />
+
       <option name="PACKAGE_NAME" value="modules.test_services" />
       <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAtualizarSala" />
       <option name="TEST_OBJECT" value="class" />
+ make-classroom-tab
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+ test-interface
+    <configuration name="interfaceMain in alocaufc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/interfaceMain" />
+
+    <configuration name="TestCadastrarSala.cadastrar_sala_com_sucesso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
     <configuration name="TestCadastrarSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="aloca-ufc" />
       <extension name="coverage">
@@ -159,10 +246,27 @@
       <option name="PACKAGE_NAME" value="modules.test_services" />
       <option name="MAIN_CLASS_NAME" value="modules.test_services.TestCadastrarSala" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="cadastrar_sala_com_sucesso" />
+      <option name="TEST_OBJECT" value="method" />
+ make-classroom-tab
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+ test-interface
+    <configuration name="java in alocaufc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test in alocaufc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test" />
+
     <configuration name="TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="aloca-ufc" />
       <extension name="coverage">
@@ -175,11 +279,28 @@
       <option name="MAIN_CLASS_NAME" value="modules.test_services.TestCadastrarSala" />
       <option name="METHOD_NAME" value="erro_ao_cadastrar_sala_com_bloco_nulo" />
       <option name="TEST_OBJECT" value="method" />
+make-classroom-tab
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+test-interface
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.MainTest.testEnglishInput" />
+      <item itemvalue="JUnit.MainTest.testStartInterface" />
+      <item itemvalue="JUnit.interfaceMain in alocaufc" />
+      <item itemvalue="JUnit.java in alocaufc" />
+      <item itemvalue="JUnit.test in alocaufc" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MainTest.testStartInterface" />
+        <item itemvalue="JUnit.java in alocaufc" />
+        <item itemvalue="JUnit.test in alocaufc" />
+        <item itemvalue="JUnit.interfaceMain in alocaufc" />
+        <item itemvalue="JUnit.MainTest.testEnglishInput" />
+
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.TestCadastrarSala" />
       <item itemvalue="JUnit.TestAtualizarSala" />
@@ -193,6 +314,8 @@
         <item itemvalue="JUnit.TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" />
         <item itemvalue="JUnit.TestAtualizarSala" />
         <item itemvalue="JUnit.TestAtualizarAula" />
+        <item itemvalue="JUnit.TestCadastrarSala.cadastrar_sala_com_sucesso" />
+ make-classroom-tab
       </list>
     </recent_temporary>
   </component>
@@ -211,6 +334,11 @@
       <workItem from="1667925577179" duration="3513000" />
       <workItem from="1667950638184" duration="3038000" />
       <workItem from="1667990666759" duration="1618000" />
+      <workItem from="1668172843403" duration="3693000" />
+      <workItem from="1668353677057" duration="601000" />
+      <workItem from="1668354293187" duration="339000" />
+      <workItem from="1668354648883" duration="11192000" />
+      <workItem from="1668439357565" duration="11618000" />
     </task>
     <servers />
   </component>
@@ -257,7 +385,10 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/alocaufc$Main.ic" NAME="Main Coverage Results" MODIFIED="1667951828540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/alocaufc$MainTest.ic" NAME="MainTest Coverage Results" MODIFIED="1668443238454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>interfaceMain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/alocaufc$Main.ic" NAME="Main Coverage Results" MODIFIED="1668443213876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>interfaceMain.*</FILTER>
     </SUITE>
   </component>
