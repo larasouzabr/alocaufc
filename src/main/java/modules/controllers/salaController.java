@@ -126,7 +126,7 @@ public class salaController implements Initializable{
         dialog.setY(y);
 
         GridPane grid = new GridPane();
-        final TextField numSala = new TextField();
+        final Label numSala = new Label();
         final CheckBox HasProjetor = new CheckBox();
         final CheckBox HasArcond = new CheckBox();
         final TextField qtdCadeiras= new TextField();
@@ -155,7 +155,7 @@ public class salaController implements Initializable{
         ok.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent actionEvent) {
                 int Index = table.getSelectionModel().getSelectedIndex();
-                table.getItems().set(Index, new Sala(null,NumeroBloco.BLOCO_1, Integer.parseInt(numSala.getText()), Integer.parseInt(qtdCadeiras.getText()), HasProjetor.isSelected(), HasArcond.isSelected()));
+                table.getItems().set(Index, new Sala(null,NumeroBloco.BLOCO_1,tabelaSalas.getSelectionModel().getSelectedItem().getNumSala(), Integer.parseInt(qtdCadeiras.getText()), HasProjetor.isSelected(), HasArcond.isSelected()));
                 dialog.close();
             }
         });
