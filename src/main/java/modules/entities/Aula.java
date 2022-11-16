@@ -18,7 +18,7 @@ public class Aula {
     private String disciplina;
     private String turma;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sala_id", nullable = false)
     private Sala sala;
 
@@ -83,6 +83,18 @@ public class Aula {
 
     public void setSala(Sala sala) {
         this.sala = sala;
+    }
+
+    @Override
+    public String toString() {
+        return "Aula{" +
+                "id=" + id +
+                ", horarioAula='" + horarioAula + '\'' +
+                ", diaDaSemana=" + diaDaSemana +
+                ", disciplina='" + disciplina + '\'' +
+                ", turma='" + turma + '\'' +
+                ", num_sala=" + sala.getNumSala() +
+                '}';
     }
 
     @Override
