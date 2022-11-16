@@ -4,6 +4,7 @@ import modules.entities.Sala;
 import modules.repositories.SalaRepository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.List;
 
 public class SalaRepositoryJPA implements SalaRepository {
@@ -15,7 +16,8 @@ public class SalaRepositoryJPA implements SalaRepository {
 
     @Override
     public List<Sala> obterTodos() {
-        return null;
+        Query query = em.createQuery("SELECT s from Sala s");
+        return query.getResultList();
     }
 
     @Override

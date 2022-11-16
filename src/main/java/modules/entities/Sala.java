@@ -90,6 +90,19 @@ public class Sala implements Serializable {
     }
 
     @Override
+    public String toString() {
+        return "Sala{" +
+                "id=" + id +
+                ", qtdCadeiras=" + qtdCadeiras +
+                ", projetor=" + projetor +
+                ", arCondicionado=" + arCondicionado +
+                ", numBloco=" + numBloco +
+                ", numSala=" + numSala +
+                ", aulas=" + aulas +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
