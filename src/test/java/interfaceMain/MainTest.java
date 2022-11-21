@@ -47,4 +47,10 @@ public class MainTest extends ApplicationTest {
     public void testStartInterface() {
         verifyThat(window("Aloca UFC"), isShowing());
     }
+
+    @Test
+    public void testClickAddSalaButton() {
+        clickOn("#addSalaButton");
+        verifyThat(window("Registrar Sala"), isShowing());
+    }
 }
