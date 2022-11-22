@@ -8,11 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/modules/controllers/registrationControllerTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/modules/controllers/salasControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modules/controllers/salaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/controllers/salaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/interfaceMain/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/interfaceMain/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/controllers/registrationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/controllers/registrationControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -69,33 +71,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "last_directory_selection": "C:/Users/eeepv/Documents/VINICIUS/academico-ufc/projetos/alocaufc/src/test/java/modules/controllers",
-    "last_opened_file_path": "C:/Users/CLIENTE/Documents/javafx-sdk-19/lib",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.12988506",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/eeepv/Documents/VINICIUS/academico-ufc/projetos/alocaufc/src/test/java/modules/controllers&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/CLIENTE/Documents/javafx-sdk-19/lib&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.12988506&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.tddjava.tddjava.modules" />
@@ -118,50 +120,51 @@
       <recent name="interfaceMain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.registrationControllerTest.testRegistrationSala">
-    <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="interfaceMain.Main" />
-      <module name="alocaufc" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainTest.testClickAddSalaButton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="alocaufc" />
+  <component name="RunManager" selected="JUnit.registrationControllerTest.testRegistrationSalaWithNullBloco">
+    <configuration name="TestAtualizarSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aloca-ufc" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="interfaceMain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="interfaceMain" />
-      <option name="MAIN_CLASS_NAME" value="interfaceMain.MainTest" />
+      <option name="PACKAGE_NAME" value="modules.test_services" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAtualizarSala" />
       <option name="METHOD_NAME" value="testClickAddSalaButton" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.testStartInterface" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="alocaufc" />
+    <configuration name="TestCadastrarSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aloca-ufc" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="interfaceMain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="interfaceMain" />
-      <option name="MAIN_CLASS_NAME" value="interfaceMain.MainTest" />
+      <option name="PACKAGE_NAME" value="modules.test_services" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestCadastrarSala" />
       <option name="METHOD_NAME" value="testStartInterface" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in alocaufc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="alocaufc" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
+    <configuration name="TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aloca-ufc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modules.test_services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modules.test_services" />
+      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestCadastrarSala" />
+      <option name="METHOD_NAME" value="erro_ao_cadastrar_sala_com_bloco_nulo" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -182,29 +185,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test in alocaufc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="registrationControllerTest.testRegistrationSalaWithNullBloco" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alocaufc" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modules.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modules.controllers" />
+      <option name="MAIN_CLASS_NAME" value="modules.controllers.registrationControllerTest" />
+      <option name="METHOD_NAME" value="testRegistrationSalaWithNullBloco" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.MainTest.testClickAddSalaButton" />
+      <item itemvalue="JUnit.TestAtualizarSala" />
+      <item itemvalue="JUnit.TestCadastrarSala" />
+      <item itemvalue="JUnit.TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" />
+      <item itemvalue="JUnit.registrationControllerTest.testRegistrationSalaWithNullBloco" />
       <item itemvalue="JUnit.registrationControllerTest.testRegistrationSala" />
-      <item itemvalue="JUnit.MainTest.testStartInterface" />
-      <item itemvalue="JUnit.java in alocaufc" />
-      <item itemvalue="JUnit.test in alocaufc" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.registrationControllerTest.testRegistrationSalaWithNullBloco" />
         <item itemvalue="JUnit.registrationControllerTest.testRegistrationSala" />
-        <item itemvalue="JUnit.MainTest.testClickAddSalaButton" />
-        <item itemvalue="JUnit.MainTest.testStartInterface" />
-        <item itemvalue="JUnit.java in alocaufc" />
-        <item itemvalue="JUnit.test in alocaufc" />
+        <item itemvalue="JUnit.TestCadastrarSala" />
+        <item itemvalue="JUnit.TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" />
+        <item itemvalue="JUnit.TestAtualizarSala" />
       </list>
     </recent_temporary>
   </component>

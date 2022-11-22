@@ -57,17 +57,12 @@ public class registrationControllerTest extends ApplicationTest {
     }
 
     @Test
-    public void testRegistrationSala() {
+    public void testRegistrationSalaWithNullBloco() {
         int numSala = 1;
-        int numBloco = 1;
         int qtdCadeiras = 45;
-        boolean projetor = true;
 
         clickOn("#numeroSalaField");
         write(Integer.toString(numSala));
-
-        ComboBox selectBloco = lookup("#selectBloco").queryComboBox();
-        clickOn(selectBloco);
 
         clickOn("#qtdCadeirasField");
         write(Integer.toString(qtdCadeiras));
@@ -78,6 +73,6 @@ public class registrationControllerTest extends ApplicationTest {
 
         clickOn("#addNewSalaButton");
 
-        // verifyThat("Success!", NodeMatchers.isVisible());
+        verifyThat("OK", NodeMatchers.isVisible());
     }
 }
