@@ -51,6 +51,7 @@ public class MainTest extends ApplicationTest {
     @Test
     public void testClickAddSalaButton() {
         clickOn("#addSalaButton");
+
         verifyThat(window("Registrar Sala"), isShowing());
     }
 }

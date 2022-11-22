@@ -8,13 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/modules/controllers/salasControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/controllers/salaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/controllers/salaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceMain/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceMain/Main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/interfaceMain/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/interfaceMain/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/controllers/registrationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/controllers/registrationControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/controllers/salasControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/controllers/salasControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,56 +117,31 @@
       <recent name="interfaceMain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.registrationControllerTest.testRegistrationSalaWithNullBloco">
-    <configuration name="TestAtualizarSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="aloca-ufc" />
+  <component name="RunManager" selected="JUnit.MainTest">
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="interfaceMain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="modules.test_services" />
-      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestAtualizarSala" />
-      <option name="METHOD_NAME" value="testClickAddSalaButton" />
+      <option name="PACKAGE_NAME" value="interfaceMain" />
+      <option name="MAIN_CLASS_NAME" value="interfaceMain.MainTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCadastrarSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="aloca-ufc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="interfaceMain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modules.test_services" />
-      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestCadastrarSala" />
-      <option name="METHOD_NAME" value="testStartInterface" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="controllers in alocaufc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/modules/controllers" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="aloca-ufc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modules.test_services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modules.test_services" />
-      <option name="MAIN_CLASS_NAME" value="modules.test_services.TestCadastrarSala" />
-      <option name="METHOD_NAME" value="erro_ao_cadastrar_sala_com_bloco_nulo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="registrationControllerTest.testRegistrationSala" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="registrationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alocaufc" />
       <extension name="coverage">
         <pattern>
@@ -179,13 +151,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="modules.controllers" />
       <option name="MAIN_CLASS_NAME" value="modules.controllers.registrationControllerTest" />
-      <option name="METHOD_NAME" value="testRegistrationSala" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="registrationControllerTest.testRegistrationSalaWithNullBloco" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="salasControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alocaufc" />
       <extension name="coverage">
         <pattern>
@@ -194,27 +165,42 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modules.controllers" />
-      <option name="MAIN_CLASS_NAME" value="modules.controllers.registrationControllerTest" />
-      <option name="METHOD_NAME" value="testRegistrationSalaWithNullBloco" />
+      <option name="MAIN_CLASS_NAME" value="modules.controllers.salasControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="salasControllerTest.testCheckBlocoInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="alocaufc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modules.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modules.controllers" />
+      <option name="MAIN_CLASS_NAME" value="modules.controllers.salasControllerTest" />
+      <option name="METHOD_NAME" value="testCheckBlocoInfo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestAtualizarSala" />
-      <item itemvalue="JUnit.TestCadastrarSala" />
-      <item itemvalue="JUnit.TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" />
-      <item itemvalue="JUnit.registrationControllerTest.testRegistrationSalaWithNullBloco" />
-      <item itemvalue="JUnit.registrationControllerTest.testRegistrationSala" />
+      <item itemvalue="JUnit.MainTest" />
+      <item itemvalue="JUnit.controllers in alocaufc" />
+      <item itemvalue="JUnit.registrationControllerTest" />
+      <item itemvalue="JUnit.salasControllerTest" />
+      <item itemvalue="JUnit.salasControllerTest.testCheckBlocoInfo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.registrationControllerTest.testRegistrationSalaWithNullBloco" />
-        <item itemvalue="JUnit.registrationControllerTest.testRegistrationSala" />
-        <item itemvalue="JUnit.TestCadastrarSala" />
-        <item itemvalue="JUnit.TestCadastrarSala.erro_ao_cadastrar_sala_com_bloco_nulo" />
-        <item itemvalue="JUnit.TestAtualizarSala" />
+        <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="JUnit.salasControllerTest" />
+        <item itemvalue="JUnit.registrationControllerTest" />
+        <item itemvalue="JUnit.controllers in alocaufc" />
+        <item itemvalue="JUnit.salasControllerTest.testCheckBlocoInfo" />
       </list>
     </recent_temporary>
   </component>
