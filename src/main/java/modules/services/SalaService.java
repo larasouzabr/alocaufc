@@ -8,6 +8,7 @@ import modules.utils.EntityManagerUtil;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.List;
 
 public class SalaService {
     private final SalaRepository repository;
@@ -41,5 +42,9 @@ public class SalaService {
 
     public Sala obterPorId(int id) {
         return this.repository.obterPorId(id);
+    }
+
+    public List<Sala> getAll() {
+        return this.repository.obterTodos();
     }
 }
