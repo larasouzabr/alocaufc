@@ -16,9 +16,6 @@ public class AulaInsertValidation {
     }
 
     public boolean isValid(Aula aula) {
-
-        Aula a = this.repository.findByAvailability(aula);
-
-        return a == null;
+        return this.repository.isTimeAvailable(aula);
     }
 }

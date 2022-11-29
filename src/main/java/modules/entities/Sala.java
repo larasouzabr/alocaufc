@@ -1,117 +1,123 @@
 package modules.entities;
 
-import modules.entities.enums.NumeroBloco;
+import modules.entities.enums.Bloco;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Objects;
-import java.util.Set;
+import java.util.List;
 
-@Entity
-public class Sala implements Serializable {
+@Entity(name = "Sala")
+@Table(name = "sala")
+public class Sala {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
-
-    @Column(name = "qtd_cadeiras")
-    int qtdCadeiras;
-    @Column(nullable = false, columnDefinition = "TINYINT(1)")
-    boolean projetor;
-    @Column(name = "ar_condicionado", nullable = false, columnDefinition = "TINYINT(1)")
-    boolean arCondicionado;
-    @Column(name = "num_bloco")
-    int numBloco;
-    @Column(name = "num_sala")
-    int numSala;
-
+    private Long id;
+    private String titulo;
+    private Integer bloco;
+    private Integer lugares;
+    private Boolean arCondicionado;
+    private Boolean projetor;
+    private Integer qtdComputadores;
+    private String observacao;
     @OneToMany(mappedBy = "sala")
-    private Set<Aula> aulas;
+    @OrderBy("diaSemana asc, horaInicio asc")
+    private List<Horario> horarios;
 
     public Sala() {
-
     }
-    public Sala(Integer id, NumeroBloco numBloco, int numeroSala, int qtdCadeiras, boolean projetor, boolean arCondicionado){
+
+    public Sala(Long id, String titulo, Integer bloco, Integer lugares, Boolean arCondicionado, Boolean projetor, Integer qtdComputadores, String observacao) {
         this.id = id;
-        setNumBloco(numBloco);
-        setNumSala(numeroSala);
-        setQtdCadeiras(qtdCadeiras);
-        setProjetor(projetor);
-        setArCondicionado(arCondicionado);
+        this.titulo = titulo;
+        this.bloco = bloco;
+        this.lugares = lugares;
+        this.arCondicionado = arCondicionado;
+        this.projetor = projetor;
+        this.qtdComputadores = qtdComputadores;
+        this.observacao = observacao;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public void setQtdCadeiras(int qtdCadeiras){
-        this.qtdCadeiras = qtdCadeiras;
+    public String getTitulo() {
+        return titulo;
     }
-    public void setProjetor(boolean projetor){
-        this.projetor = projetor;
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
-    public void setArCondicionado(boolean arCondicionado){
-        this.arCondicionado = arCondicionado;
+
+    public Bloco getBloco() {
+        if(bloco == null) return null;
+
+        return Bloco.valueOf(bloco);
     }
-    public void setNumSala(int numSala) {
-        this.numSala = numSala;
-    }
-    public void setNumBloco(NumeroBloco numBloco){
-        if(numBloco != null) {
-            this.numBloco = numBloco.getNumero();
+
+    public void setBloco(Bloco bloco) {
+
+        if(bloco != null) {
+            this.bloco = bloco.getNumero();
         }
     }
 
-    public int getQtdCadeiras(){
-        return this.qtdCadeiras;
-    }
-    public boolean getProjetor(){
-        return this.projetor;
-    }
-    public boolean getArCondidionado(){
-        return this.arCondicionado;
-    }
-    public NumeroBloco getBloco(){
-        return NumeroBloco.valueOf(numBloco);
-    }
-    public int getNumSala(){
-        return this.numSala;
+    public Integer getLugares() {
+        return lugares;
     }
 
-    public Set<Aula> getAulas() {
-        return aulas;
+    public void setLugares(Integer lugares) {
+        this.lugares = lugares;
     }
 
-    public void setAulas(Set<Aula> aulas) {
-        this.aulas = aulas;
+    public Boolean getArCondicionado() {
+        return arCondicionado;
     }
 
-    @Override
-    public String toString() {
-        return "Sala{" +
-                "id=" + id +
-                ", qtdCadeiras=" + qtdCadeiras +
-                ", projetor=" + projetor +
-                ", arCondicionado=" + arCondicionado +
-                ", numBloco=" + numBloco +
-                ", numSala=" + numSala +
-                ", aulas=" + aulas +
-                '}';
+    public void setArCondicionado(Boolean arCondicionado) {
+        this.arCondicionado = arCondicionado;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Sala sala = (Sala) o;
-        return Objects.equals(id, sala.id);
+    public Boolean getProjetor() {
+        return projetor;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
+    public void setProjetor(Boolean projetor) {
+        this.projetor = projetor;
+    }
+
+    public Integer getQtdComputadores() {
+        return qtdComputadores;
+    }
+
+    public void setQtdComputadores(Integer qtdComputadores) {
+        this.qtdComputadores = qtdComputadores;
+    }
+
+    public String getObservacao() {
+        return observacao;
+    }
+
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
+    }
+
+
+
+    public void setBloco(Integer bloco) {
+        this.bloco = bloco;
+    }
+
+    public List<Horario> getHorarios() {
+        return horarios;
+    }
+
+    public void setHorarios(List<Horario> horarios) {
+        this.horarios = horarios;
     }
 }
+
+

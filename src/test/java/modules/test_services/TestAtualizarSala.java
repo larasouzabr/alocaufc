@@ -1,8 +1,8 @@
 package modules.test_services;
 
+import modules.entities.enums.Bloco;
 import modules.services.SalaService;
 import modules.entities.Sala;
-import modules.entities.enums.NumeroBloco;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,15 +12,15 @@ public class TestAtualizarSala {
     public void atualiza_informacoes_recorrentes() {
         SalaService salaService = new SalaService();
 
-        Sala sala = salaService.obterPorId(1);
-        sala.setQtdCadeiras(8);
+        Sala sala = salaService.obterPorId(1L);
+        sala.setLugares(20);
         sala.setProjetor(false);
         sala.setArCondicionado(false);
-        sala.setNumBloco(NumeroBloco.BLOCO_2);
+        sala.setBloco(Bloco.BLOCO_2);
 
         sala = salaService.update(sala);
-        assertEquals(8, sala.getQtdCadeiras());
+        assertEquals(20, sala.getLugares());
         assertEquals(false, sala.getProjetor());
-        assertEquals(false, sala.getArCondidionado());
+        assertEquals(false, sala.getArCondicionado());
     }
 }

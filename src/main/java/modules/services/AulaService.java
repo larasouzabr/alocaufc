@@ -23,7 +23,7 @@ public class AulaService {
 
     public Aula alocar(Aula aula) {
         if(aula.getId() != null) {
-            Aula aulaExistente = this.repository.obterPorId(aula.getId());
+            Aula aulaExistente = this.repository.findById(aula.getId());
 
             if (aulaExistente != null) {
                 throw new Error("Aula já cadastrada");
@@ -43,24 +43,24 @@ public class AulaService {
         }
 
         try{
-            return repository.adicionar(aula);
+            return repository.save(aula);
         } catch(IllegalStateException e) {
             throw new IllegalStateException("teste");
         }
 
     }
 
-    public Aula obterPorId(int id) {
-        return repository.obterPorId(id);
+    public Aula obterPorId(long id) {
+        return repository.findById(id);
     }
 
     public Aula update(Aula aula) {
-        Aula aulaExistente = this.repository.obterPorId(aula.getId());
+        Aula aulaExistente = this.repository.findById(aula.getId());
 
         if(!validator.isValid(aula)){
             throw new IllegalArgumentException("Sala já está lotada para o horário escolhido");
         }
 
-        return repository.atualizar(aulaExistente);
+        return repository.save(aulaExistente);
     }
 }

@@ -9,10 +9,10 @@ public class EntityManagerUtil {
     private static EntityManager em;
 
     public static EntityManager get() {
-        if(emf == null) {
+        if(em == null) {
             emf = Persistence.createEntityManagerFactory("aloca-ufc");
+            em = emf.createEntityManager();
         }
-        em = emf.createEntityManager();
 
         return em;
     }

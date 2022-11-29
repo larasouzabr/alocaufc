@@ -5,10 +5,11 @@ import modules.entities.Sala;
 import java.util.List;
 
 public interface SalaRepository {
-    List<Sala> obterTodos();
-    Sala obterPorId(int id);
-    Sala adicionar(Sala sala);
-    Sala atualizar(Sala sala);
-    void remover(Sala sala);
+    List<Sala> findAll();
+    List<Sala> findByBloco(Integer bloco);
+    Sala findById(Long id);
+    Sala save(Sala sala);
+    void remove(Sala sala);
+
 
 }

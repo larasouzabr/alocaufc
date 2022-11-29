@@ -20,7 +20,7 @@ public class SalaService {
 
     public Sala create(Sala sala){
         if(sala.getId() != null) {
-            Sala salaExistente = this.repository.obterPorId(sala.getId());
+            Sala salaExistente = this.repository.findById(sala.getId());
 
             if (salaExistente != null) {
                 throw new Error("Sala já cadastrada");
@@ -28,23 +28,23 @@ public class SalaService {
         }
 
         if(sala.getBloco() == null) {
-            throw new Error("Bloco não pode ser nulo");
+            throw new IllegalArgumentException("Bloco não pode ser nulo");
         }
 
-        return repository.adicionar(sala);
+        return repository.save(sala);
     }
 
     public Sala update(Sala sala) {
-        Sala salaExistente = this.repository.obterPorId(sala.getId());
+        Sala salaExistente = this.repository.findById(sala.getId());
 
-        return repository.atualizar(salaExistente);
+        return repository.save(salaExistente);
     }
 
-    public Sala obterPorId(int id) {
-        return this.repository.obterPorId(id);
+    public Sala obterPorId(Long id) {
+        return this.repository.findById(id);
     }
 
     public List<Sala> getAll() {
-        return this.repository.obterTodos();
+        return this.repository.findAll();
     }
 }

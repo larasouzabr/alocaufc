@@ -1,6 +1,6 @@
 package modules.entities.enums;
 
-public enum DiaDaSemana {
+public enum DiaSemana {
     SEGUNDA(2),
     TERCA(3),
     QUARTA(4),
@@ -8,7 +8,7 @@ public enum DiaDaSemana {
     SEXTA(6);
 
     private int numero;
-    private DiaDaSemana(int numero){
+    private DiaSemana(int numero){
         this.numero = numero;
     }
 
@@ -16,8 +16,8 @@ public enum DiaDaSemana {
         return numero;
     }
 
-    public static DiaDaSemana valueOf(int numero) {
-        for (DiaDaSemana value : DiaDaSemana.values()) {
+    public static DiaSemana valueOf(int numero) {
+        for (DiaSemana value : DiaSemana.values()) {
             if (value.getNumero() == numero) {
                 return value;
             }

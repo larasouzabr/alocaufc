@@ -1,58 +1,69 @@
 package modules.repositories.impl;
 
+import modules.entities.Aula;
 import modules.entities.Sala;
 import modules.repositories.SalaRepository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class SalaRepositoryJPA implements SalaRepository {
     private EntityManager em;
 
-    public SalaRepositoryJPA(EntityManager em){
+    public SalaRepositoryJPA(EntityManager em) {
         this.em = em;
     }
 
     @Override
-    public List<Sala> obterTodos() {
+    public List<Sala> findAll() {
         Query query = em.createQuery("SELECT s from Sala s");
-        return query.getResultList();
+        List<Sala> salas = query.getResultList();
+        return salas;
     }
 
     @Override
-    public Sala obterPorId(int id) {
+    public List<Sala> findByBloco(Integer bloco) {
+            String query = "SELECT s FROM Sala s WHERE s.bloco = :bloco";
+            TypedQuery<Sala> s = (TypedQuery<Sala>) em.createQuery(query);
+            s.setParameter("bloco", bloco);
+            List<Sala> salas = s.getResultList();
+            return salas;
+    }
+
+    @Override
+    public Sala findById(Long id) {
         return em.find(Sala.class, id);
     }
 
     @Override
-    public Sala adicionar(Sala sala) {
-        try {
-            em.getTransaction().begin();
-            em.persist(sala);
-            em.getTransaction().commit();
-        } catch(Exception e) {
-            em.getTransaction().rollback();
-        }
-
+    public Sala save(Sala sala) {
+            if (sala.getId() == null) {
+                transaction(sala, e -> em.persist(e));
+            } else {
+                transaction(sala, e -> em.merge(e));
+            }
         return sala;
     }
 
+
     @Override
-    public Sala atualizar(Sala sala) {
+    public void remove(Sala sala) {
+        transaction(sala, e -> em.remove(e));
+    }
+
+    private void transaction(Sala sala, Consumer consumer) {
         try {
             em.getTransaction().begin();
-            em.merge(sala);
+            consumer.accept(sala);
             em.getTransaction().commit();
         } catch(Exception e) {
             em.getTransaction().rollback();
+            e.printStackTrace();
         }
-
-        return sala;
-    }
-
-    @Override
-    public void remover(Sala sala) {
-
     }
 }
