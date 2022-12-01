@@ -1,7 +1,6 @@
-package modules.repositories;
+package com.alocaufc.repositories;
 
-import modules.entities.Aula;
-import modules.entities.Horario;
+import com.alocaufc.entities.Aula;
 
 import java.util.List;
 

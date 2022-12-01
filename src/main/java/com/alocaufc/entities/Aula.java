@@ -1,6 +1,10 @@
-package modules.entities;
+package com.alocaufc.entities;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.GenerationType;
 
 @Entity(name = "Aula")
 @Table(name = "aula")

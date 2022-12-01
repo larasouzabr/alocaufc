@@ -1,4 +1,6 @@
-package modules.controllers;
+package com.alocaufc.controllers;
+import com.alocaufc.entities.Sala;
+import com.alocaufc.services.SalaService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -7,7 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import modules.entities.enums.NumeroBloco;
+import com.alocaufc.entities.enums.Bloco;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -22,10 +24,12 @@ public class registrationController implements Initializable {
     public Label blocoLabel;
     public Label arCondLabel;
     public Label qtdCadeirasLabel;
-    public TextField numeroSalaField;
+    public TextField tituloSalaField;
     public TextField qtdCadeirasField;
     public CheckBox projetorCheckbox;
     public CheckBox arCondCheckbox;
+
+    public TextArea observacaoField;
 
     @FXML private  ComboBox selectBloco;
 
@@ -43,14 +47,27 @@ public class registrationController implements Initializable {
 
     @FXML
     public void saveSalaInfoAction(ActionEvent event){
-        salasController SalaContr = new salasController();
         if(selectBloco.getValue() != null){
-        SalaContr.addNewSala (
-                            NumeroBloco.valueOf((Integer) selectBloco.getValue()),
-                            Integer.parseInt(numeroSalaField.getText()),
-                            Integer.parseInt(qtdCadeirasField.getText()),
-                            Boolean.parseBoolean(String.valueOf(projetorCheckbox.isSelected())),
-                            Boolean.parseBoolean(String.valueOf(arCondCheckbox.isSelected())));
+        SalaService service = new SalaService();
+        service.create(new Sala(
+                null,
+                tituloSalaField.getText(),
+                (int) selectBloco.getValue(),
+                Integer.parseInt(qtdCadeirasField.getText()),
+                Boolean.parseBoolean(String.valueOf(projetorCheckbox.isSelected())),
+                Boolean.parseBoolean(String.valueOf(arCondCheckbox.isSelected())),
+                null,
+                observacaoField.getText()
+        ));
+//
+//        salasController SalaContr = new salasController();
+//        if(selectBloco.getValue() != null){
+//        SalaContr.addNewSala (
+//                            Bloco.valueOf((Integer) selectBloco.getValue()),
+//                            Integer.parseInt(numeroSalaField.getText()),
+//                            Integer.parseInt(qtdCadeirasField.getText()),
+//                            Boolean.parseBoolean(String.valueOf(projetorCheckbox.isSelected())),
+//                            Boolean.parseBoolean(String.valueOf(arCondCheckbox.isSelected())));
 
                     // Show successfully new classroom addition dialog
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -77,9 +94,9 @@ public class registrationController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        NumeroBloco[] numerosBloco = NumeroBloco.class.getEnumConstants();
+        Bloco[] numerosBloco = Bloco.class.getEnumConstants();
         ArrayList<Integer> numsBlocoValues = new ArrayList<>();
-        for(NumeroBloco nb: numerosBloco) {
+        for(Bloco nb: numerosBloco) {
             numsBlocoValues.add(nb.getNumero());
         }
         options = FXCollections.observableArrayList(numsBlocoValues);

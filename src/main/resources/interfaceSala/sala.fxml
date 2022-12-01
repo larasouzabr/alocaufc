@@ -13,22 +13,27 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="manageStudents" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modules.controllers.salaController">
+<AnchorPane fx:id="manageStudents" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alocaufc.controllers.salaController">
     <children>
         <Pane prefHeight="94.0" prefWidth="1044.0" style="-fx-background-color: #1976D2;" stylesheets="@css/RegStudent.css">
             <children>
-                <Text fill="WHITE" layoutX="368.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bloco 1" textAlignment="CENTER">
+                <Text fill="WHITE" layoutX="368.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bloco " textAlignment="CENTER">
                     <font>
                         <Font name="BebasNeue" size="50.0" />
                     </font>
                 </Text>
+            <Text fx:id="numeroBloco" fill="WHITE" layoutX="504.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " textAlignment="CENTER">
+               <font>
+                  <Font name="BebasNeue" size="50.0" />
+               </font>
+            </Text>
             </children>
         </Pane>
-      <TableView layoutY="136.0" prefHeight="416.0" prefWidth="516.0" fx:id="tabelaSalas">
+      <TableView fx:id="tabelaSalas" layoutY="136.0" prefHeight="416.0" prefWidth="516.0">
         <columns>
-          <TableColumn fx:id="numSalaCell" prefWidth="74.39999580383301" text="Sala" />
-            <TableColumn fx:id="qtdCadeirasCell" prefWidth="140.79998016357422" text="Quantidade de cadeiras " />
-            <TableColumn fx:id="arcondtCell" prefWidth="99.20002746582031" text="Ar-condicionado" />
+          <TableColumn fx:id="salaTituloCell" prefWidth="147.99999696016312" text="Sala" />
+            <TableColumn fx:id="lugaresCell" prefWidth="57.600006103515625" text="Lugares" />
+            <TableColumn fx:id="arcondtCell" prefWidth="111.20005798339844" text="Ar-condicionado" />
             <TableColumn fx:id="projetorCell" prefWidth="60.0" text="Projetor" />
             <TableColumn fx:id="acoesCell" prefWidth="147.20001220703125" text="Ações" />
         </columns>
@@ -40,7 +45,7 @@
                   <Font name="Gill Sans MT Condensed" size="25.0" />
                </font>
             </Label>
-            <TableView prefHeight="430.0" prefWidth="502.0" fx:id="tabelaAulasSala">
+            <TableView fx:id="tabelaAulasSala" prefHeight="430.0" prefWidth="502.0">
               <columns>
                   <TableColumn fx:id="horarioCell" prefWidth="123.199951171875" text="Horário" />
                 <TableColumn fx:id="diaDaSemanaCell" prefWidth="136.800048828125" text="Dia da Semana" />

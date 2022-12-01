@@ -1,6 +1,6 @@
-package modules.entities;
+package com.alocaufc.entities;
 
-import modules.entities.enums.Bloco;
+import com.alocaufc.entities.enums.Bloco;
 
 import javax.persistence.*;
 import java.util.List;

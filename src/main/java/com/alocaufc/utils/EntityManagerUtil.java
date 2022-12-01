@@ -1,16 +1,18 @@
-package modules.utils;
+package com.alocaufc.utils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class EntityManagerUtil {
-    private static EntityManagerFactory emf;
     private static EntityManager em;
+
+    private EntityManagerUtil() {
+    }
 
     public static EntityManager get() {
         if(em == null) {
-            emf = Persistence.createEntityManagerFactory("aloca-ufc");
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("aloca-ufc");
             em = emf.createEntityManager();
         }
 

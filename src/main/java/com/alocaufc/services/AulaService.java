@@ -1,15 +1,12 @@
-package modules.services;
+package com.alocaufc.services;
 
-import modules.entities.Aula;
-import modules.entities.Sala;
-import modules.repositories.AulaRepository;
-import modules.repositories.impl.AulaRepositoryJPA;
-import modules.services.validation.AulaInsertValidation;
-import modules.utils.EntityManagerUtil;
+import com.alocaufc.entities.Aula;
+import com.alocaufc.repositories.AulaRepository;
+import com.alocaufc.repositories.impl.AulaRepositoryJPA;
+import com.alocaufc.services.validation.AulaInsertValidation;
+import com.alocaufc.utils.EntityManagerUtil;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 public class AulaService {
     private final AulaRepository repository;
@@ -30,13 +27,13 @@ public class AulaService {
             }
         }
 
-        if(aula.getSala() == null) {
-            throw new IllegalArgumentException("Sala não pode ser nula");
-        }
-
-        if(aula.getDiaDaSemana() == null) {
-            throw new IllegalArgumentException("Dia da semana não pode ser nulo");
-        }
+//        if(aula.getSala() == null) {
+//            throw new IllegalArgumentException("Sala não pode ser nula");
+//        }
+//
+//        if(aula.getDiaDaSemana() == null) {
+//            throw new IllegalArgumentException("Dia da semana não pode ser nulo");
+//        }
 
         if(!validator.isValid(aula)){
             throw new IllegalArgumentException("Sala já está lotada para o horário escolhido");

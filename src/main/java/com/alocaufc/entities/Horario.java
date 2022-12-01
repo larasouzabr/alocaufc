@@ -1,4 +1,4 @@
-package modules.entities;
+package com.alocaufc.entities;
 
 import javax.persistence.*;
 import java.time.LocalTime;

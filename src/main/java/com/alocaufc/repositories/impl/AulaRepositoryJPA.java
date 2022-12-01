@@ -1,13 +1,10 @@
-package modules.repositories.impl;
+package com.alocaufc.repositories.impl;
 
-import modules.entities.Aula;
-import modules.entities.Horario;
-import modules.repositories.AulaRepository;
+import com.alocaufc.entities.Aula;
+import com.alocaufc.repositories.AulaRepository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
 import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 import java.util.List;
 import java.util.function.Consumer;
 

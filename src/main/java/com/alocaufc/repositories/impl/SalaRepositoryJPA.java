@@ -1,14 +1,11 @@
-package modules.repositories.impl;
+package com.alocaufc.repositories.impl;
 
-import modules.entities.Aula;
-import modules.entities.Sala;
-import modules.repositories.SalaRepository;
+import com.alocaufc.entities.Sala;
+import com.alocaufc.repositories.SalaRepository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 

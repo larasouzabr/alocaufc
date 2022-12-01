@@ -1,13 +1,11 @@
-package modules.services;
+package com.alocaufc.services;
 
-import modules.entities.Sala;
-import modules.repositories.SalaRepository;
-import modules.repositories.impl.SalaRepositoryJPA;
-import modules.utils.EntityManagerUtil;
+import com.alocaufc.entities.Sala;
+import com.alocaufc.repositories.SalaRepository;
+import com.alocaufc.repositories.impl.SalaRepositoryJPA;
+import com.alocaufc.utils.EntityManagerUtil;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.util.List;
 
 public class SalaService {
@@ -47,4 +45,6 @@ public class SalaService {
     public List<Sala> getAll() {
         return this.repository.findAll();
     }
+
+    public List<Sala> getByBloco(int bloco) { return this.repository.findByBloco(bloco); }
 }

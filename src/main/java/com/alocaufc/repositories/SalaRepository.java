@@ -1,6 +1,6 @@
-package modules.repositories;
+package com.alocaufc.repositories;
 
-import modules.entities.Sala;
+import com.alocaufc.entities.Sala;
 
 import java.util.List;
 

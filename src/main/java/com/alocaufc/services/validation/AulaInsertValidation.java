@@ -1,12 +1,10 @@
-package modules.services.validation;
+package com.alocaufc.services.validation;
 
-import modules.entities.Aula;
-import modules.repositories.AulaRepository;
-import modules.repositories.impl.AulaRepositoryJPA;
+import com.alocaufc.entities.Aula;
+import com.alocaufc.repositories.AulaRepository;
+import com.alocaufc.repositories.impl.AulaRepositoryJPA;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 public class AulaInsertValidation {
     private final AulaRepository repository;

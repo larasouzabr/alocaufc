@@ -1,17 +1,18 @@
-package modules.controllers;
+package com.alocaufc.controllers;
 
-import interfaceMain.Main;
+import com.alocaufc.Main;
+import com.alocaufc.entities.enums.Bloco;
+import com.alocaufc.utils.BlocoHolder;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import modules.entities.Sala;
-import modules.entities.enums.NumeroBloco;
-import modules.services.SalaService;
+import com.alocaufc.entities.Sala;
+import com.alocaufc.services.SalaService;
 
 import java.io.IOException;
 import java.net.URL;
@@ -27,7 +28,7 @@ public class salasController implements Initializable {
     @FXML
     void salaAddButtonAction(ActionEvent event) throws IOException {
         String caminhoPagina = "/interfaceRegistration/Registration.fxml";
-        FXMLLoader fxmlLoader = new FXMLLoader(salasController.class.getResource(caminhoPagina));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(caminhoPagina));
             Scene scene = new Scene(fxmlLoader.load(), 388, 458);
             Stage newStage = new Stage();
             newStage.setTitle("Registrar Sala");
@@ -35,9 +36,9 @@ public class salasController implements Initializable {
             newStage.show();
     }
     // method receives parameters from add window
-    public void addNewSala(NumeroBloco numBloco, int numeroSala, int qtdCadeiras, boolean projetor, boolean arCondicionado){
+    public void addNewSala(Bloco numBloco, int numeroSala, int qtdCadeiras, boolean projetor, boolean arCondicionado){
         SalaService service = new SalaService();
-        Sala sala = new Sala(null,numBloco,numeroSala,qtdCadeiras,projetor, arCondicionado);
+        Sala sala = new Sala(null, "Sala 5", 1, 45, true, true, null, "");
         service.create(sala);
     }
 
@@ -48,10 +49,16 @@ public class salasController implements Initializable {
 
     public void checkBlocoInfo(ActionEvent actionEvent) throws IOException {
         String caminhoPagina = "/interfaceSala/sala.fxml";
+
+        Node node = (Node) actionEvent.getSource();
+        String bloco = (String) node.getUserData();
+        BlocoHolder holder = BlocoHolder.getInstance();
+        holder.setBloco(Bloco.valueOf(Integer.parseInt(bloco)));
+
         FXMLLoader fxmlLoader = new FXMLLoader(salasController.class.getResource(caminhoPagina));
         Scene scene = new Scene(fxmlLoader.load(), 1044, 590);
         Stage newStage = new Stage();
-        newStage.setTitle("Salas do bloco 1");
+        newStage.setTitle("Salas do bloco " + bloco);
         newStage.setScene(scene);
         newStage.show();
     }

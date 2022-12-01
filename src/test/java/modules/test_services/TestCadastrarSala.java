@@ -1,8 +1,8 @@
 package modules.test_services;
 
-import modules.entities.Sala;
-import modules.entities.enums.Bloco;
-import modules.services.SalaService;
+import com.alocaufc.entities.Sala;
+import com.alocaufc.entities.enums.Bloco;
+import com.alocaufc.services.SalaService;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

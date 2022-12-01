@@ -1,9 +1,9 @@
-package modules.repositories.impl;
+package com.alocaufc.repositories.impl;
 
-import modules.entities.Aula;
-import modules.entities.Horario;
-import modules.entities.Sala;
-import modules.repositories.HorarioRepository;
+import com.alocaufc.entities.Aula;
+import com.alocaufc.entities.Horario;
+import com.alocaufc.entities.Sala;
+import com.alocaufc.repositories.HorarioRepository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;

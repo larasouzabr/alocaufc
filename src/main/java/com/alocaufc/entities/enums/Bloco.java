@@ -1,4 +1,4 @@
-package modules.entities.enums;
+package com.alocaufc.entities.enums;
 
 public enum Bloco {
     BLOCO_1(1),
