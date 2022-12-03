@@ -7,9 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/070495e9-74d0-4fb1-9a25-ee450be76168.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/070495e9-74d0-4fb1-9a25-ee450be76168.xml" afterDir="false" />
+    <list default="true" id="93ba95b9-4869-4e14-a0fc-a3e64677981a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/CLIENTE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modules/controllers/salaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/controllers/salaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,33 +69,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "last_directory_selection": "C:/Users/eeepv/Documents/VINICIUS/academico-ufc/projetos/alocaufc/src/test/java/modules/controllers",
-    "last_opened_file_path": "C:/Users/CLIENTE/Documents/javafx-sdk-19/lib",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.18455498",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/eeepv/Documents/VINICIUS/academico-ufc/projetos/alocaufc/src/test/java/modules/controllers&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/CLIENTE/Documents/javafx-sdk-19/lib&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.18455498&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.tddjava.tddjava.modules" />
@@ -115,7 +118,7 @@
       <recent name="interfaceMain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest">
+  <component name="RunManager">
     <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alocaufc" />
       <extension name="coverage">
@@ -194,10 +197,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.controllers in alocaufc" />
         <item itemvalue="JUnit.MainTest" />
         <item itemvalue="JUnit.salasControllerTest" />
         <item itemvalue="JUnit.registrationControllerTest" />
-        <item itemvalue="JUnit.controllers in alocaufc" />
         <item itemvalue="JUnit.salasControllerTest.testCheckBlocoInfo" />
       </list>
     </recent_temporary>
