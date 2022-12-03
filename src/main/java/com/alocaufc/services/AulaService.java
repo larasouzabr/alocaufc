@@ -13,7 +13,8 @@ public class AulaService {
     private final AulaInsertValidation validator;
 
     public AulaService(){
-        EntityManager em = EntityManagerUtil.get();
+        EntityManagerUtil emu = EntityManagerUtil.getInstance();
+        EntityManager em = emu.getEntityManager();
         this.repository = new AulaRepositoryJPA(em);
         this.validator = new AulaInsertValidation(em);
     }

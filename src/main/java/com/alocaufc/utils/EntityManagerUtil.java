@@ -5,21 +5,29 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class EntityManagerUtil {
-    private static EntityManager em;
+    private static EntityManagerUtil INSTANCE;
+
+    private EntityManager em;
 
     private EntityManagerUtil() {
-    }
-
-    public static EntityManager get() {
         if(em == null) {
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("aloca-ufc");
             em = emf.createEntityManager();
         }
+    }
 
+    public static EntityManagerUtil getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new EntityManagerUtil();
+        }
+        return INSTANCE;
+    }
+
+    public EntityManager getEntityManager() {
         return em;
     }
 
-    public static void close() {
+    public void close() {
         if(em != null) {
             em.close();
         }

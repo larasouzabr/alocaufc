@@ -12,7 +12,8 @@ public class SalaService {
     private final SalaRepository repository;
 
     public SalaService(){
-        EntityManager em = EntityManagerUtil.get();
+        EntityManagerUtil emu = EntityManagerUtil.getInstance();
+        EntityManager em = emu.getEntityManager();
         this.repository = new SalaRepositoryJPA(em);
     }
 
