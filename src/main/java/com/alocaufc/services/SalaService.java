@@ -34,9 +34,11 @@ public class SalaService {
     }
 
     public Sala update(Sala sala) {
-        Sala salaExistente = this.repository.findById(sala.getId());
+        if (this.repository.findById(sala.getId()) == null) {
+            throw new Error("Sala não existe");
+        }
 
-        return repository.save(salaExistente);
+        return repository.save(sala);
     }
 
     public Sala obterPorId(Long id) {
