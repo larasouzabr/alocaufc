@@ -118,7 +118,7 @@
             <Insets right="-15.0" />
          </padding>
       </HBox>
-      <Label fx:id="arCondLabel1" contentDisplay="BOTTOM" graphicTextGap="20.0" layoutX="14.0" layoutY="302.0" prefHeight="27.0" prefWidth="178.0" text="Observacão">
+      <Label fx:id="observacao" contentDisplay="BOTTOM" graphicTextGap="20.0" layoutX="14.0" layoutY="302.0" prefHeight="27.0" prefWidth="178.0" text="Observacão">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

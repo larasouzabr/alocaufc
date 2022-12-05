@@ -30,6 +30,7 @@ public class registrationController implements Initializable {
     public CheckBox arCondCheckbox;
 
     public TextArea observacaoField;
+    public Label observacao;
 
     @FXML private  ComboBox selectBloco;
 
@@ -59,16 +60,6 @@ public class registrationController implements Initializable {
                 null,
                 observacaoField.getText()
         ));
-//
-//        salasController SalaContr = new salasController();
-//        if(selectBloco.getValue() != null){
-//        SalaContr.addNewSala (
-//                            Bloco.valueOf((Integer) selectBloco.getValue()),
-//                            Integer.parseInt(numeroSalaField.getText()),
-//                            Integer.parseInt(qtdCadeirasField.getText()),
-//                            Boolean.parseBoolean(String.valueOf(projetorCheckbox.isSelected())),
-//                            Boolean.parseBoolean(String.valueOf(arCondCheckbox.isSelected())));
-
                     // Show successfully new classroom addition dialog
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success!");
