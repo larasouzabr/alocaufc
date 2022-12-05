@@ -3,6 +3,7 @@ import com.alocaufc.entities.Aula;
 import com.alocaufc.entities.Horario;
 import com.alocaufc.entities.Sala;
 import com.alocaufc.services.AulaService;
+import com.alocaufc.services.HorarioService;
 import com.alocaufc.services.SalaService;
 import org.junit.jupiter.api.Test;
 
@@ -17,9 +18,10 @@ public class TestAlocarAula {
         Sala sala = salaService.obterPorId(2L);
 
         List<Horario> horarios = sala.getHorarios();
+        HorarioService horarioService = new HorarioService();
         AulaService aulaService = new AulaService();
         Aula aula = aulaService.obterPorId(2L);
-        assertNotNull(aulaService.alocar(horarios, aula));
+        assertNotNull(horarioService.alocar(horarios, aula));
     }
 
     @Test

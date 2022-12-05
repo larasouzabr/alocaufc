@@ -1,7 +1,10 @@
 package com.alocaufc.controllers;
 
 import com.alocaufc.entities.Horario;
+import com.alocaufc.entities.enums.Bloco;
+import com.alocaufc.entities.enums.DiaSemana;
 import com.alocaufc.services.AulaService;
+import com.alocaufc.services.HorarioService;
 import com.alocaufc.services.SalaService;
 import com.alocaufc.utils.BlocoHolder;
 import javafx.beans.property.*;
@@ -110,7 +113,7 @@ public class salaController implements Initializable{
     private void initializeScheduleColumns(){
 
         horarioCell.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getHoraInicio() + " - " + cellData.getValue().getHoraFim()));
-        diaDaSemanaCell.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDiaSemana().toString()));
+        diaDaSemanaCell.setCellValueFactory(cellData -> new SimpleStringProperty(DiaSemana.valueOf(cellData.getValue().getDiaSemana()).toString()));
         disciplinaCell.setCellValueFactory (cellData -> cellData.getValue().getAula() != null ? new SimpleStringProperty(cellData.getValue().getAula().getDisciplina()) : new SimpleStringProperty("-") );
         turmaCell.setCellValueFactory(cellData -> cellData.getValue().getAula() != null ? new SimpleStringProperty(cellData.getValue().getAula().getTurma()) : new SimpleStringProperty("-"));
         observacoesAulaCell.setCellValueFactory(cellData -> cellData.getValue() != null ? new SimpleStringProperty(cellData.getValue().getObservacao()) : new SimpleStringProperty("-"));
@@ -384,9 +387,9 @@ public class salaController implements Initializable{
         salvarAlocButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent actionEvent) {
                 int Index = table.getSelectionModel().getSelectedIndex();
-                AulaService aulaService = new AulaService();
+                HorarioService horarioService = new HorarioService();
                 Aula novaAula = new Aula(null,selectDisAloc.getValue().toString(),selectTurmaAloc.getValue().toString());
-                aulaService.alocar(horariosList,novaAula);
+                horarioService.alocar(horariosList,novaAula);
                 table.getItems().set(Index, new Horario(table.getSelectionModel().getSelectedItem().getId(),1, table.getSelectionModel().getSelectedItem().getHoraInicio(), table.getSelectionModel().getSelectedItem().getHoraFim(), observacao.getText(),table.getSelectionModel().getSelectedItem().getSala() ,novaAula));
                 init();
                 table.refresh();

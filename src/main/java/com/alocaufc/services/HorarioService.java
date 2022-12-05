@@ -29,4 +29,21 @@ public class HorarioService {
     public Horario create(Horario horario) {
         return repository.save(horario);
     }
+
+    public Aula alocar(List<Horario> horarios, Aula aula) {
+        HorarioService horarioService = new HorarioService();
+        for(Horario horario: horarios) {
+            horario.setAula(aula);
+            horarioService.update(horario);
+        }
+        return aula;
+    }
+
+    public void desalocar(List<Horario> horarios) {
+        HorarioService horarioService = new HorarioService();
+        for(Horario horario: horarios) {
+            horario.setAula(null);
+            horarioService.update(horario);
+        }
+    }
 }
