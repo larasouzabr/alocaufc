@@ -1,6 +1,7 @@
 package com.alocaufc.entities;
 
 import com.alocaufc.entities.enums.Bloco;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,11 +14,15 @@ public class Sala {
     private Long id;
     private String titulo;
     private Integer bloco;
+    @ColumnDefault("0")
     private Integer lugares;
-    private Boolean arCondicionado;
-    private Boolean projetor;
+    @ColumnDefault("false")
+    private Boolean arCondicionado = false;
+    @ColumnDefault("false")
+    private Boolean projetor = false;
     private Integer qtdComputadores;
-    private String observacao;
+    @Column(columnDefinition = "varchar(255) default ''")
+    private String observacao = "";
     @OneToMany(mappedBy = "sala")
     @OrderBy("diaSemana asc, horaInicio asc")
     private List<Horario> horarios;

@@ -26,4 +26,21 @@ public enum DiaSemana {
         throw new IllegalArgumentException("Dia da semana não pode ser nulo");
     }
 
+    @Override
+    public String toString() {
+        switch (numero) {
+            case 2:
+                return "Segunda-feira";
+            case 3:
+                return "Terça-feira";
+            case 4:
+                return "Quarta-feira";
+            case 5:
+                return "Quinta-feira";
+            case 6:
+                return "Sexta-feira";
+            default:
+                return "";
+        }
+    }
 }

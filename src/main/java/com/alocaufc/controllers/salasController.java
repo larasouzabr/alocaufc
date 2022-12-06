@@ -35,13 +35,6 @@ public class salasController implements Initializable {
             newStage.setScene(scene);
             newStage.show();
     }
-    // method receives parameters from add window
-    public void addNewSala(Bloco numBloco, int numeroSala, int qtdCadeiras, boolean projetor, boolean arCondicionado){
-        SalaService service = new SalaService();
-        Sala sala = new Sala(null, "Sala 5", 1, 45, true, true, null, "");
-        service.create(sala);
-    }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -56,7 +49,7 @@ public class salasController implements Initializable {
         holder.setBloco(Bloco.valueOf(Integer.parseInt(bloco)));
 
         FXMLLoader fxmlLoader = new FXMLLoader(salasController.class.getResource(caminhoPagina));
-        Scene scene = new Scene(fxmlLoader.load(), 1044, 590);
+        Scene scene = new Scene(fxmlLoader.load(), 1293, 687);
         Stage newStage = new Stage();
         newStage.setTitle("Salas do bloco " + bloco);
         newStage.setScene(scene);

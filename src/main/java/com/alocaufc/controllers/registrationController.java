@@ -1,5 +1,7 @@
 package com.alocaufc.controllers;
+import com.alocaufc.buiders.SalaBuilder;
 import com.alocaufc.entities.Sala;
+import com.alocaufc.services.HorarioService;
 import com.alocaufc.services.SalaService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -30,6 +32,7 @@ public class registrationController implements Initializable {
     public CheckBox arCondCheckbox;
 
     public TextArea observacaoField;
+    public Label observacao;
 
     @FXML private  ComboBox selectBloco;
 
@@ -37,7 +40,7 @@ public class registrationController implements Initializable {
     public salasController salasController;
 
     @FXML
-   void closeButtonAction(ActionEvent event){
+    void closeButtonAction(ActionEvent event){
 
         final Node source = (Node) event.getSource();
         final Stage stage = (Stage) source.getScene().getWindow();
@@ -47,43 +50,38 @@ public class registrationController implements Initializable {
 
     @FXML
     public void saveSalaInfoAction(ActionEvent event){
-        if(selectBloco.getValue() != null){
-        SalaService service = new SalaService();
-        service.create(new Sala(
-                null,
-                tituloSalaField.getText(),
-                (int) selectBloco.getValue(),
-                Integer.parseInt(qtdCadeirasField.getText()),
-                Boolean.parseBoolean(String.valueOf(projetorCheckbox.isSelected())),
-                Boolean.parseBoolean(String.valueOf(arCondCheckbox.isSelected())),
-                null,
-                observacaoField.getText()
-        ));
-//
-//        salasController SalaContr = new salasController();
-//        if(selectBloco.getValue() != null){
-//        SalaContr.addNewSala (
-//                            Bloco.valueOf((Integer) selectBloco.getValue()),
-//                            Integer.parseInt(numeroSalaField.getText()),
-//                            Integer.parseInt(qtdCadeirasField.getText()),
-//                            Boolean.parseBoolean(String.valueOf(projetorCheckbox.isSelected())),
-//                            Boolean.parseBoolean(String.valueOf(arCondCheckbox.isSelected())));
+        if(selectBloco.getValue() != null) {
+            SalaService service = new SalaService();
+            HorarioService horarioService = new HorarioService();
 
-                    // Show successfully new classroom addition dialog
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle("Success!");
-                    alert.setHeaderText("Sala adicionada com sucesso!!");
-                    alert.setContentText(null);
-                    alert.showAndWait();
+            SalaBuilder salaBuilder = SalaBuilder.builder()
+                    .setTitulo(tituloSalaField.getText())
+                    .setBloco(Bloco.valueOf(Integer.parseInt(selectBloco.getValue().toString())))
+                    .setLugares(Integer.parseInt(qtdCadeirasField.getText()))
+                    .setObservacao(observacaoField.getText());
+
+            if(projetorCheckbox.isSelected()) salaBuilder.hasProjetor();
+            if(arCondCheckbox.isSelected()) salaBuilder.hasArCondicionado();
+
+            Sala sala = salaBuilder.build();
+
+            service.create(sala);
+            horarioService.generateHorarios(sala);
+
+            // Show successfully new classroom addition dialog
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success!");
+            alert.setHeaderText("Sala adicionada com sucesso!!");
+            alert.setContentText(null);
+            alert.showAndWait();
 
 
-                // Closing the window after the save/update has been successfully finished
-                final Node source = (Node) event.getSource();
-                final Stage stage = (Stage) source.getScene().getWindow();
-                stage.close();
+            // Closing the window after the save/update has been successfully finished
+            final Node source = (Node) event.getSource();
+            final Stage stage = (Stage) source.getScene().getWindow();
+            stage.close();
 
-            }
-        else{
+        } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Error!");
             alert.setHeaderText("Bloco não pode ser nulo");
@@ -104,7 +102,7 @@ public class registrationController implements Initializable {
         selectBloco.getItems().setAll(options);
     }
     public void setParentController(salasController documentController) {
-            this.salasController = documentController;
+        this.salasController = documentController;
     }
 
 }

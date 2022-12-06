@@ -8,8 +8,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/070495e9-74d0-4fb1-9a25-ee450be76168.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/070495e9-74d0-4fb1-9a25-ee450be76168.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/buiders/SalaBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/services/HorarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/utils/AutoCompleteComboBoxListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/CLIENTE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/CLIENTE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alocaufc/controllers/registrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/controllers/registrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alocaufc/controllers/salaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/controllers/salaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alocaufc/controllers/salasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/controllers/salasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alocaufc/entities/Sala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/entities/Sala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alocaufc/entities/enums/DiaSemana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/entities/enums/DiaSemana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alocaufc/services/AulaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/services/AulaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alocaufc/services/SalaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/services/SalaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alocaufc/services/validation/AulaInsertValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceRegistration/Registration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceRegistration/Registration.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceSala/image/delete-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceSala/image/delete-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceSala/image/edit-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceSala/image/edit-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAlocarAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAlocarAula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/test_services/TestCadastrarSala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestCadastrarSala.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +98,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/eeepv/Documents/VINICIUS/academico-ufc/projetos/alocaufc/src/test/java/modules/controllers&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/CLIENTE/Documents/javafx-sdk-19/lib&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/eeepv/Documents/alocaufc&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -227,6 +245,8 @@
       <workItem from="1669739238703" duration="78000" />
       <workItem from="1669898059048" duration="2724000" />
       <workItem from="1669934731066" duration="916000" />
+      <workItem from="1670344998192" duration="1345000" />
+      <workItem from="1670351947586" duration="361000" />
     </task>
     <servers />
   </component>
