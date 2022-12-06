@@ -1,26 +1,23 @@
-package modules.entities.enums;
+package com.alocaufc.entities.enums;
 
-import java.util.Arrays;
-import java.util.List;
-
-public enum NumeroBloco {
+public enum Bloco {
     BLOCO_1(1),
     BLOCO_2(2),
     BLOCO_3(3),
     BLOCO_4(4);
 
-    private int numero;
-    private NumeroBloco(int numero){
+    private Integer numero;
+    private Bloco(Integer numero){
 
         this.numero = numero;
     }
 
-    public int getNumero() {
+    public Integer getNumero() {
         return numero;
     }
 
-    public static NumeroBloco valueOf(int numero) {
-        for (NumeroBloco value : NumeroBloco.values()) {
+    public static Bloco valueOf(int numero) {
+        for (Bloco value : Bloco.values()) {
             if (value.getNumero() == numero) {
                 return value;
             }
@@ -28,6 +25,4 @@ public enum NumeroBloco {
 
         throw new IllegalArgumentException("Bloco não pode ser nulo");
     }
-
-
 }

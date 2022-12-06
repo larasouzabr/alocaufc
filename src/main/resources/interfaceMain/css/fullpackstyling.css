@@ -147,6 +147,6 @@
     -fx-border-color: derive(-fx-pie-color, 1%);
     -fx-border-width: 0px;
 }
-.linear-grad
-{
+.linear-grad {
     -fx-background-color: linear-gradient(to bottom left, #A868A0, #2D75E8);
+}

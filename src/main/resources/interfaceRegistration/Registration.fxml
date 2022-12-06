@@ -6,6 +6,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,7 +16,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="458.0" prefWidth="388.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modules.controllers.registrationController">
+<AnchorPane id="AnchorPane" prefHeight="458.0" prefWidth="388.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alocaufc.controllers.registrationController">
     <children>
         <Label layoutX="99.0" layoutY="11.0" prefHeight="34.0" prefWidth="203.0" text="Adicionar Sala">
             <font>
@@ -41,22 +42,36 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                          <Label fx:id="numeroSalaLabel" prefHeight="27.0" prefWidth="219.0" text="Numero da sala">
+                          <Label fx:id="numeroSalaLabel" prefHeight="27.0" prefWidth="219.0" text="Título da Sala">
                               <font>
                                   <Font name="System Bold" size="14.0" />
                               </font>
                           </Label>
-                        <TextField fx:id="numeroSalaField" prefHeight="26.0" prefWidth="150.0" />
+                        <TextField fx:id="tituloSalaField" prefHeight="26.0" prefWidth="150.0" />
                      </children>
                   </VBox>
                   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label fx:id="qtdCadeirasLabel" prefHeight="27.0" prefWidth="188.0" text="Quantidade de cadeiras">
+                        <Label fx:id="qtdCadeirasLabel" prefHeight="27.0" prefWidth="188.0" text="Quantidade de lugares">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Label>
                         <TextField fx:id="qtdCadeirasField" prefHeight="26.0" prefWidth="176.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="98.0" prefWidth="176.0">
+                     <children>
+                        <Label fx:id="arCondLabel" contentDisplay="BOTTOM" graphicTextGap="20.0" prefHeight="27.0" prefWidth="178.0" text="Possui ar-condicionado?">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="arCondCheckbox" mnemonicParsing="false" text="Sim">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
                      </children>
                   </VBox>
                </children>
@@ -103,19 +118,11 @@
             <Insets right="-15.0" />
          </padding>
       </HBox>
-      <VBox layoutX="113.0" layoutY="274.0" prefHeight="98.0" prefWidth="176.0">
-         <children>
-            <Label fx:id="arCondLabel" contentDisplay="BOTTOM" graphicTextGap="20.0" prefHeight="27.0" prefWidth="178.0" text="Possui ar-condicionado?">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-            <CheckBox fx:id="arCondCheckbox" mnemonicParsing="false" text="Sim">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </CheckBox>
-         </children>
-      </VBox>
+      <Label fx:id="arCondLabel1" contentDisplay="BOTTOM" graphicTextGap="20.0" layoutX="14.0" layoutY="302.0" prefHeight="27.0" prefWidth="178.0" text="Observacão">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="observacaoField" layoutX="14.0" layoutY="329.0" prefHeight="85.0" prefWidth="200.0" />
     </children>
 </AnchorPane>

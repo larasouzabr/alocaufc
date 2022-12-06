@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" fx:controller="modules.controllers.salasController" prefWidth="844.0" style="-fx-background-color: #fff;" stylesheets="@css/fullpackstyling.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" fx:controller="com.alocaufc.controllers.salasController" prefWidth="844.0" style="-fx-background-color: #fff;" stylesheets="@css/fullpackstyling.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="187.0" layoutY="123.0" prefHeight="339.0" prefWidth="642.0">
          <children>
@@ -25,22 +25,22 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="buttonBlock1" mnemonicParsing="false" prefHeight="142.0" prefWidth="282.0" styleClass="button1"  onAction="#checkBlocoInfo" text="Bloco 1" textFill="WHITE">
+                  <Button mnemonicParsing="false" prefHeight="142.0" prefWidth="282.0" styleClass="button1"  onAction="#checkBlocoInfo" text="Bloco 1" textFill="WHITE" fx:id="blocoButton1" userData="1">
                      <font>
                         <Font name="Franklin Gothic Book" size="41.0" />
                      </font>
                   </Button>
-                  <Button layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="148.0" prefWidth="282.0" styleClass="button1" text="Bloco 4" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="148.0" prefWidth="282.0" onAction="#checkBlocoInfo"  styleClass="button1" text="Bloco 4" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="blocoButton4" userData="4">
                      <font>
                         <Font name="Franklin Gothic Book" size="41.0" />
                      </font>
                   </Button>
-                  <Button layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="148.0" prefWidth="282.0" styleClass="button1" text="Bloco 3" textFill="WHITE" GridPane.rowIndex="1">
+                  <Button layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="148.0" prefWidth="282.0"  onAction="#checkBlocoInfo" styleClass="button1" text="Bloco 3" textFill="WHITE" GridPane.rowIndex="1" fx:id="blocoButton3" userData="3">
                      <font>
                         <Font name="Franklin Gothic Book" size="41.0" />
                      </font>
                   </Button>
-                  <Button layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="148.0" prefWidth="282.0" styleClass="button1" text="Bloco 2" textFill="WHITE" GridPane.columnIndex="1">
+                  <Button layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="148.0" prefWidth="282.0" onAction="#checkBlocoInfo" styleClass="button1" text="Bloco 2" textFill="WHITE" GridPane.columnIndex="1" fx:id="blocoButton2" userData="2">
                      <font>
                         <Font name="Franklin Gothic Book" size="41.0" />
                      </font>

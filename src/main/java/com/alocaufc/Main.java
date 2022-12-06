@@ -1,4 +1,4 @@
-package interfaceMain;
+package com.alocaufc;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +15,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
 
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Main.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/interfaceMain/Main.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 844, 504);
         primaryStage.setTitle("Aloca UFC");
         primaryStage.setScene(scene);

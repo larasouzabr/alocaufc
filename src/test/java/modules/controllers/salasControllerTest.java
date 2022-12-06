@@ -1,6 +1,5 @@
 package modules.controllers;
-
-import interfaceMain.Main;
+import com.alocaufc.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;

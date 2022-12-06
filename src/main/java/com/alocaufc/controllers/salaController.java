@@ -1,6 +1,8 @@
-package modules.controllers;
+package com.alocaufc.controllers;
 
-import com.sun.glass.ui.GlassRobot;
+import com.alocaufc.entities.enums.Bloco;
+import com.alocaufc.services.SalaService;
+import com.alocaufc.utils.BlocoHolder;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -14,25 +16,24 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Callback;
-import modules.entities.Aula;
-import modules.entities.Sala;
-import modules.entities.enums.NumeroBloco;
-import modules.services.SalaService;
+import com.alocaufc.entities.Aula;
+import com.alocaufc.entities.Sala;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class salaController implements Initializable{
     public TableView<Sala> tabelaSalas;
     public TableView<Aula> tabelaAulasSala;
-    public TableColumn<Sala, Integer> numSalaCell;
-    public TableColumn<Sala, Integer> qtdCadeirasCell;
+    public TableColumn<Sala, String> salaTituloCell;
+    public TableColumn<Sala, Integer> lugaresCell;
     public TableColumn<Sala, Boolean> projetorCell;
     public TableColumn<Aula,String> horarioCell;
     public TableColumn<Aula,Integer> diaDaSemanaCell;
@@ -40,6 +41,7 @@ public class salaController implements Initializable{
     public TableColumn<Aula,String> turmaCell;
     public TableColumn<Sala, Boolean> arcondtCell;
     public TextField searchField;
+    public Text numeroBloco;
     public TableColumn<Sala, Boolean> acoesCell;
     public static ObservableList<Sala> data_table;
 
@@ -51,9 +53,11 @@ public class salaController implements Initializable{
     }
 
     private void initializeColumns(){
-        numSalaCell.setCellValueFactory(new PropertyValueFactory<Sala,Integer>("numSala"));
-        qtdCadeirasCell.setCellValueFactory(new PropertyValueFactory<Sala,Integer>("qtdCadeiras"));
-        arcondtCell.setCellValueFactory(cellData -> new SimpleBooleanProperty(cellData.getValue().getArCondidionado()));
+        BlocoHolder holder = BlocoHolder.getInstance();
+        numeroBloco.setText(holder.getBloco().getNumero().toString());
+        salaTituloCell.setCellValueFactory(new PropertyValueFactory<Sala,String>("titulo"));
+        lugaresCell.setCellValueFactory(new PropertyValueFactory<Sala,Integer>("lugares"));
+        arcondtCell.setCellValueFactory(cellData -> new SimpleBooleanProperty(cellData.getValue().getArCondicionado()));
         arcondtCell.setCellFactory(col -> new TableCell<Sala, Boolean>() {
             @Override
             protected void updateItem(Boolean item, boolean empty) {
@@ -81,10 +85,18 @@ public class salaController implements Initializable{
 
     private void addDataToColumns(){
         data_table = FXCollections.observableArrayList();
+        SalaService salaService = new SalaService();
 
-        for (int x = 1; x < 12; x++) {
-           data_table.add( new Sala(null,NumeroBloco.BLOCO_1,x,x*3*2+9,true,true));
+        BlocoHolder holder = BlocoHolder.getInstance();
+        List<Sala> salas = salaService.getByBloco(holder.getBloco().getNumero());
+
+        for(Sala sala: salas) {
+            data_table.add(sala);
         }
+
+//        for (int x = 1; x < 12; x++) {
+//           data_table.add( new Sala(null, "Sala X", Bloco.BLOCO_1.getNumero(),x,true,true, null, ""));
+//        }
 
         tabelaSalas.setItems(data_table);
     }
@@ -131,10 +143,14 @@ public class salaController implements Initializable{
         final CheckBox HasArcond = new CheckBox();
         final TextField qtdCadeiras= new TextField();
 
-        numSala.setText(Integer.toString(tabelaSalas.getSelectionModel().getSelectedItem().getNumSala()));
-        qtdCadeiras.setText(Integer.toString(tabelaSalas.getSelectionModel().getSelectedItem().getQtdCadeiras()));
-        HasArcond.setSelected(tabelaSalas.getSelectionModel().getSelectedItem().getArCondidionado());
-        HasProjetor.setSelected(tabelaSalas.getSelectionModel().getSelectedItem().getProjetor());
+        //numSala.setText(Integer.toString(tabelaSalas.getSelectionModel().getSelectedItem().getNumSala()));
+        numSala.setText(Integer.toString(1));
+        qtdCadeiras.setText(Integer.toString(1));
+        HasArcond.setSelected(true);
+        HasProjetor.setSelected(true);
+//        qtdCadeiras.setText(Integer.toString(tabelaSalas.getSelectionModel().getSelectedItem().getQtdCadeiras()));
+//        HasArcond.setSelected(tabelaSalas.getSelectionModel().getSelectedItem().getArCondidionado());
+//        HasProjetor.setSelected(tabelaSalas.getSelectionModel().getSelectedItem().getProjetor());
 
 
         grid.addRow(0, new Label("Numero da sala"), numSala);
@@ -155,7 +171,8 @@ public class salaController implements Initializable{
         ok.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent actionEvent) {
                 int Index = table.getSelectionModel().getSelectedIndex();
-                table.getItems().set(Index, new Sala(null,NumeroBloco.BLOCO_1,tabelaSalas.getSelectionModel().getSelectedItem().getNumSala(), Integer.parseInt(qtdCadeiras.getText()), HasProjetor.isSelected(), HasArcond.isSelected()));
+                table.getItems().set(Index, new Sala(null, "Sala X", Bloco.BLOCO_1.getNumero(),1,true,true, null, ""));
+                //table.getItems().set(Index, new Sala(null,NumeroBloco.BLOCO_1,tabelaSalas.getSelectionModel().getSelectedItem().getNumSala(), Integer.parseInt(qtdCadeiras.getText()), HasProjetor.isSelected(), HasArcond.isSelected()));
                 dialog.close();
             }
         });
