@@ -389,16 +389,32 @@ public class salaController implements Initializable{
         cancelarAlocButton.setCancelButton(true);
         salvarAlocButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent actionEvent) {
-                HorarioService horarioService = new HorarioService();
-                AulaService aulaService = new AulaService();
-                Aula novaAula = aulaService.create(new Aula(null,textDisAloc.getText(),textTurmaAloc.getText()));
-                Horario horario = horarioService.getById(table.getSelectionModel().getSelectedItem().getId());
-                horario.setAula(novaAula);
-                horarioService.update(horario);
+                if(textDisAloc.getLength() > 0 && textTurmaAloc.getLength() > 0){
+                    HorarioService horarioService = new HorarioService();
+                    AulaService aulaService = new AulaService();
+                    Aula novaAula = aulaService.create(new Aula(null,textDisAloc.getText(),textTurmaAloc.getText()));
+                    Horario horario = horarioService.getById(table.getSelectionModel().getSelectedItem().getId());
+                    horario.setAula(novaAula);
+                    horarioService.update(horario);
 
-                init();
-                table.refresh();
-                dialog.close();
+                    // Show successfully new classroom addition dialog
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Success!");
+                    alert.setHeaderText("Aula alocada com sucesso!!");
+                    alert.setContentText(null);
+                    alert.showAndWait();
+                    init();
+                    table.refresh();
+                    dialog.close();
+                }
+                else{
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error!");
+                    alert.setHeaderText("Informações não podem ser nulas");
+                    alert.setContentText(null);
+                    alert.showAndWait();
+                }
+
             }
         });
         cancelarAlocButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -495,7 +511,12 @@ public class salaController implements Initializable{
                 aulaService.delete(aula);
 
                 horarioService.update(horario);
-
+                // Show successfully new classroom addition dialog
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Success!");
+                alert.setHeaderText("Aula desalocada com sucesso!!");
+                alert.setContentText(null);
+                alert.showAndWait();
                 init();
                 table.refresh();
                 dialog.close();
