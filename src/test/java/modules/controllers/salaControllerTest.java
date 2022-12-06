@@ -1,7 +1,6 @@
-package interfaceMain;
+package modules.controllers;
 
 import com.alocaufc.Main;
-import com.alocaufc.controllers.salasController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
@@ -10,17 +9,16 @@ import javafx.stage.Stage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-//import org.loadui.testfx.GuiTest;
 import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit.ApplicationTest;
 
 import java.io.IOException;
 
+import static org.junit.Assert.*;
 import static org.testfx.api.FxAssert.verifyThat;
 import static org.testfx.matcher.base.WindowMatchers.isShowing;
 
-public class MainTest extends ApplicationTest {
-
+public class salaControllerTest extends ApplicationTest {
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/interfaceMain/Main.fxml"));
@@ -42,14 +40,9 @@ public class MainTest extends ApplicationTest {
     }
 
     @Test
-    public void testStartInterface() {
-        verifyThat(window("Aloca UFC"), isShowing());
-    }
+    public void testOpenBloco() throws IOException {
+        clickOn("#blocoButton1");
 
-    @Test
-    public void testClickAddSalaButton() {
-        clickOn("#addSalaButton");
-
-        verifyThat(window("Registrar Sala"), isShowing());
+        verifyThat(window("Salas do bloco 1"), isShowing());
     }
 }

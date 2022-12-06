@@ -1,5 +1,6 @@
 package modules.controllers;
 
+import com.alocaufc.Main;
 import com.alocaufc.entities.enums.Bloco;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -35,14 +36,12 @@ public class registrationControllerTest extends ApplicationTest {
     @Override
     public void start(Stage stage) throws Exception {
         String caminhoPagina = "/interfaceRegistration/Registration.fxml";
-        Bloco[] numerosBloco = Bloco.class.getEnumConstants();
-        ArrayList<Integer> numsBlocoValues = new ArrayList<>();
-        for(Bloco nb: numerosBloco) {
-            numsBlocoValues.add(nb.getNumero());
-        }
-        options = FXCollections.observableArrayList(numsBlocoValues);
-
-        selectBloco.getItems().setAll(options);
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(caminhoPagina));
+        Scene scene = new Scene(fxmlLoader.load(), 388, 458);
+        Stage newStage = new Stage();
+        newStage.setTitle("Registrar Sala");
+        newStage.setScene(scene);
+        newStage.show();
     }
 
     @Before
@@ -58,18 +57,18 @@ public class registrationControllerTest extends ApplicationTest {
 
     @Test
     public void testRegistrationSalaWithNullBloco() {
-        int numSala = 1;
-        int qtdCadeiras = 45;
-
-        clickOn("#numeroSalaField");
-        write(Integer.toString(numSala));
+        clickOn("#tituloSalaField");
+        write("Sala 1");
 
         clickOn("#qtdCadeirasField");
-        write(Integer.toString(qtdCadeiras));
+        write(Integer.toString(45));
 
         clickOn("#projetorCheckbox");
 
         clickOn("#arCondCheckbox");
+
+        clickOn("#observacaoField");
+        write("Projetor está com defeito");
 
         clickOn("#addNewSalaButton");
 
