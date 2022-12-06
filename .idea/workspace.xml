@@ -7,55 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93ba95b9-4869-4e14-a0fc-a3e64677981a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/entities/Aula.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/entities/Horario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/entities/Sala.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/repositories/AulaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/repositories/HorarioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/repositories/SalaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/repositories/impl/AulaRepositoryJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/repositories/impl/HorarioRepositoryJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/repositories/impl/SalaRepositoryJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/services/AulaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/services/SalaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/services/validation/AulaInsertValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/utils/BlocoHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/utils/EntityManagerUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/070495e9-74d0-4fb1-9a25-ee450be76168.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/070495e9-74d0-4fb1-9a25-ee450be76168.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaceMain/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/controllers/registrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/controllers/registrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/controllers/salaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/controllers/salaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/controllers/salasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/controllers/salasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/entities/Aula.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/entities/Sala.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/entities/enums/DiaDaSemana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/entities/enums/DiaSemana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/entities/enums/NumeroBloco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alocaufc/entities/enums/Bloco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/repositories/AulaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/repositories/SalaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/repositories/impl/AulaRepositoryJPA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/repositories/impl/SalaRepositoryJPA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/services/AulaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/services/SalaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/services/validation/AulaInsertValidation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/utils/EntityManagerUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceMain/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceMain/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceMain/css/fullpackstyling.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceMain/css/fullpackstyling.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceRegistration/Registration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceRegistration/Registration.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/interfaceSala/sala.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/interfaceMain/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/interfaceMain/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/controllers/registrationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/controllers/registrationControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/controllers/salasControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/controllers/salasControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAlocarAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAlocarAula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarAula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarSala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestAtualizarSala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/test_services/TestCadastrarSala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/test_services/TestCadastrarSala.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,9 +86,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.32853404&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.18455498&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
@@ -161,7 +115,7 @@
       <recent name="interfaceMain" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MainTest">
     <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="alocaufc" />
       <extension name="coverage">
@@ -241,9 +195,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MainTest" />
-        <item itemvalue="JUnit.controllers in alocaufc" />
         <item itemvalue="JUnit.salasControllerTest" />
         <item itemvalue="JUnit.registrationControllerTest" />
+        <item itemvalue="JUnit.controllers in alocaufc" />
         <item itemvalue="JUnit.salasControllerTest.testCheckBlocoInfo" />
       </list>
     </recent_temporary>
@@ -251,7 +205,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="false" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="93ba95b9-4869-4e14-a0fc-a3e64677981a" name="Changes" comment="" />
+      <changelist id="f58c52a9-4720-4ce1-b7f3-75d140246438" name="Changes" comment="" />
       <created>1664985581683</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -273,9 +227,6 @@
       <workItem from="1669739238703" duration="78000" />
       <workItem from="1669898059048" duration="2724000" />
       <workItem from="1669934731066" duration="916000" />
-      <workItem from="1670100663882" duration="2638000" />
-      <workItem from="1670287147899" duration="2508000" />
-      <workItem from="1670290001825" duration="155000" />
     </task>
     <servers />
   </component>
