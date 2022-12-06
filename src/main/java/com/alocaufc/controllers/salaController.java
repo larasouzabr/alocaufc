@@ -328,11 +328,9 @@ public class salaController implements Initializable{
         dialog.initStyle(StageStyle.UTILITY);
         dialog.setX(parent.getX() + parent.getWidth());
         dialog.setY(y);
-        List<Horario> horariosList = new ArrayList<>();
         GridPane grid = new GridPane();
-        final  ComboBox selectDisAloc = new ComboBox<>();
-        final  ComboBox selectTurmaAloc = new ComboBox<>();
-        final  CheckBox diaSemana = new CheckBox();
+        final  TextField textDisAloc = new TextField();
+        final  TextField textTurmaAloc = new TextField();
         final Label horarioLabelStatic = new Label();
         final TextArea observacao = new TextArea();
 
@@ -353,11 +351,11 @@ public class salaController implements Initializable{
         alocar.setAlignment(Pos.CENTER);
 
         VBox disciplina = new VBox(10);
-        disciplina.getChildren().addAll(new Label("Disciplina"), selectDisAloc);
+        disciplina.getChildren().addAll(new Label("Disciplina"), textDisAloc);
         disciplina.setPadding(new Insets(5));
 
         VBox turma = new VBox(10);
-        turma.getChildren().addAll(new Label("Turma"), selectTurmaAloc);
+        turma.getChildren().addAll(new Label("Turma"), textTurmaAloc);
         turma.setPadding(new Insets(5));
 
 
@@ -375,7 +373,6 @@ public class salaController implements Initializable{
         discAndTurma.setSpacing(7.0);
         discAndTurma.setAlignment(Pos.CENTER);
 
-        grid.addRow(3, new Label("Dia da Semana"), diaSemana);
         grid.addRow(5, new Label("Observação"), observacao);
 
         grid.setHgap(10);
@@ -392,14 +389,32 @@ public class salaController implements Initializable{
         cancelarAlocButton.setCancelButton(true);
         salvarAlocButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent actionEvent) {
-                int Index = table.getSelectionModel().getSelectedIndex();
-                HorarioService horarioService = new HorarioService();
-                Aula novaAula = new Aula(null,selectDisAloc.getValue().toString(),selectTurmaAloc.getValue().toString());
-                horarioService.alocar(horariosList,novaAula);
-                table.getItems().set(Index, new Horario(table.getSelectionModel().getSelectedItem().getId(),1, table.getSelectionModel().getSelectedItem().getHoraInicio(), table.getSelectionModel().getSelectedItem().getHoraFim(), observacao.getText(),table.getSelectionModel().getSelectedItem().getSala() ,novaAula));
-                init();
-                table.refresh();
-                dialog.close();
+                if(textDisAloc.getLength() > 0 && textTurmaAloc.getLength() > 0){
+                    HorarioService horarioService = new HorarioService();
+                    AulaService aulaService = new AulaService();
+                    Aula novaAula = aulaService.create(new Aula(null,textDisAloc.getText(),textTurmaAloc.getText()));
+                    Horario horario = horarioService.getById(table.getSelectionModel().getSelectedItem().getId());
+                    horario.setAula(novaAula);
+                    horarioService.update(horario);
+
+                    // Show successfully new classroom addition dialog
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Success!");
+                    alert.setHeaderText("Aula alocada com sucesso!!");
+                    alert.setContentText(null);
+                    alert.showAndWait();
+                    init();
+                    table.refresh();
+                    dialog.close();
+                }
+                else{
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error!");
+                    alert.setHeaderText("Informações não podem ser nulas");
+                    alert.setContentText(null);
+                    alert.showAndWait();
+                }
+
             }
         });
         cancelarAlocButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -467,10 +482,9 @@ public class salaController implements Initializable{
         final Label horarioFinal = new Label();
         final Label text = new Label();
 
-        disciplina.setText("FBD");
-        turma.setText("QXD001");
-//      disciplina.setText(table.getSelectionModel().getSelectedItem().getAula().getDisciplina());
-//      turma.setText(table.getSelectionModel().getSelectedItem().getAula().getTurma());
+
+        disciplina.setText(table.getSelectionModel().getSelectedItem().getAula().getDisciplina());
+        turma.setText(table.getSelectionModel().getSelectedItem().getAula().getTurma());
         horarioInicial.setText(table.getSelectionModel().getSelectedItem().getHoraInicio().toString());
         horarioFinal.setText(table.getSelectionModel().getSelectedItem().getHoraFim().toString());
 
@@ -487,8 +501,22 @@ public class salaController implements Initializable{
         deletarAulaButton.setStyle("-fx-background-color: red; -fx-text-fill: white;");
         deletarAulaButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent actionEvent) {
-                int Index = table.getSelectionModel().getSelectedIndex();
-                table.getItems().set(Index, new Horario(table.getSelectionModel().getSelectedItem().getId(),table.getSelectionModel().getSelectedItem().getDiaSemana(), table.getSelectionModel().getSelectedItem().getHoraInicio(), table.getSelectionModel().getSelectedItem().getHoraFim(), null,table.getSelectionModel().getSelectedItem().getSala() ,null));
+
+                HorarioService horarioService = new HorarioService();
+                AulaService aulaService = new AulaService();
+
+                Horario horario = horarioService.getById(table.getSelectionModel().getSelectedItem().getId());
+                Aula aula = horario.getAula();
+                horario.setAula(null);
+                aulaService.delete(aula);
+
+                horarioService.update(horario);
+                // Show successfully new classroom addition dialog
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Success!");
+                alert.setHeaderText("Aula desalocada com sucesso!!");
+                alert.setContentText(null);
+                alert.showAndWait();
                 init();
                 table.refresh();
                 dialog.close();

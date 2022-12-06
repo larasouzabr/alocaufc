@@ -64,4 +64,8 @@ public class HorarioService {
 
         sala.setHorarios(horarios);
     }
+
+    public Horario getById(Long id) {
+        return repository.findById(id);
+    }
 }
