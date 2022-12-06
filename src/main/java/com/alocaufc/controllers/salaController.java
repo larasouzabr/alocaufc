@@ -264,10 +264,16 @@ public class salaController implements Initializable{
         ok.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent actionEvent) {
                 SalaService salaService = new SalaService();
-                BlocoHolder holder = BlocoHolder.getInstance();
-                salaService.update(new Sala(table.getSelectionModel().getSelectedItem().getId(), table.getSelectionModel().getSelectedItem().getTitulo(),holder.getBloco().getNumero(), Integer.parseInt(qtdCadeiras.getText()),HasProjetor.isSelected(),HasArcond.isSelected(), null, observacao.getText()));
+                Sala sala = salaService.obterPorId(table.getSelectionModel().getSelectedItem().getId());
+                sala.setLugares(Integer.parseInt(qtdCadeiras.getText()));
+                sala.setArCondicionado(HasArcond.isSelected());
+                sala.setProjetor(HasProjetor.isSelected());
+                sala.setObservacao(observacao.getText());
+
+                salaService.update(sala);
+
                 init();
-                table.refresh();
+
                 dialog.close();
             }
         });
