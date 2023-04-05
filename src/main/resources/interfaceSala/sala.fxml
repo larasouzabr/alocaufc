@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="SalaManagement" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="1293.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alocaufc.controllers.salaController">
+    <children>
+        <Pane layoutX="-8.0" prefHeight="94.0" prefWidth="1304.0" style="-fx-background-color: #1976D2;" stylesheets="@css/RegStudent.css">
+            <children>
+                <Text fill="WHITE" layoutX="632.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bloco ">
+                    <font>
+                        <Font name="BebasNeue" size="50.0" />
+                    </font>
+                </Text>
+            <Text fx:id="numeroBloco" fill="WHITE" layoutX="768.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " textAlignment="CENTER">
+               <font>
+                  <Font name="BebasNeue" size="50.0" />
+               </font>
+            </Text>
+            </children>
+        </Pane>
+      <TableView fx:id="tabelaSalas" layoutY="136.0" onMouseClicked="#checkSelectedCel" prefHeight="551.0" prefWidth="624.0">
+        <columns>
+          <TableColumn fx:id="salaTituloCell" prefWidth="127.19997864961624" text="Sala" />
+            <TableColumn fx:id="lugaresCell" prefWidth="79.20001220703125" text="Lugares" />
+            <TableColumn fx:id="arcondtCell" prefWidth="113.59999084472656" text="Ar-condicionado" />
+            <TableColumn fx:id="projetorCell" prefWidth="79.199951171875" text="Projetor" />
+            <TableColumn fx:id="observacoesSalaCell" prefWidth="132.800048828125" text="Observações" />
+            <TableColumn fx:id="acoesCell" prefWidth="94.39996337890625" text="Ações" />
+        </columns>
+      </TableView>
+      <VBox alignment="TOP_CENTER" layoutX="624.0" layoutY="94.0" prefHeight="597.0" prefWidth="670.0" style="-fx-background-color: #B2DDF7;">
+         <children>
+            <Label fx:id="salaAlocLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="578.0" style="-fx-font-weight: 900;" text="Alocação por Sala" textAlignment="CENTER" textFill="#331f1f">
+               <font>
+                  <Font name="Trebuchet MS" size="55.0" />
+               </font>
+            </Label>
+            <Label fx:id="salaAlocLabelName" alignment="CENTER" contentDisplay="CENTER" layoutX="232.0" layoutY="10.0" prefHeight="36.0" prefWidth="228.0" style="-fx-font-weight: 600;" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Nirmala UI Semilight" size="31.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tabelaAulasSala" prefHeight="386.0" prefWidth="655.0">
+              <columns>
+                  <TableColumn fx:id="horarioCell" prefWidth="100.79998779296875" text="Horário" />
+                <TableColumn fx:id="diaDaSemanaCell" prefWidth="101.60003662109375" text="Dia da Semana" />
+                <TableColumn fx:id="disciplinaCell" prefWidth="111.199951171875" text="Disciplina" />
+                  <TableColumn fx:id="turmaCell" minWidth="0.0" prefWidth="77.5999755859375" text="Turma" />
+                  <TableColumn fx:id="observacoesAulaCell" minWidth="0.0" prefWidth="117.5999755859375" text="Observações" />
+                  <TableColumn fx:id="acoesColumn" prefWidth="75.0" text="Ações">
+                     <columns>
+                        <TableColumn fx:id="alocarCell" editable="false" maxWidth="134.4000244140625" minWidth="0.0" prefWidth="91.199951171875" sortType="DESCENDING" sortable="false" text="Alocar" />
+                        <TableColumn fx:id="deletarCell" maxWidth="114.39996337890625" minWidth="0.0" prefWidth="69.60009765625" text="Deletar" />
+                     </columns>
+                  </TableColumn>
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <HBox layoutX="14.0" layoutY="100.0" prefHeight="30.0" prefWidth="346.0">
+         <children>
+            <ChoiceBox fx:id="filterChoiceBox" prefHeight="29.0" prefWidth="149.0" />
+            <TextField fx:id="searchField" prefHeight="26.0" prefWidth="190.0" promptText="pesquise aqui">
+               <HBox.margin>
+                  <Insets left="6.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
